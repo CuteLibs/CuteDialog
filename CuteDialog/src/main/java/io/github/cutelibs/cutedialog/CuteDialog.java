@@ -59,19 +59,15 @@ public class CuteDialog extends Dialog {
     }
 
     private void inits() {
-
-
+        // whole card design
         getWindow().setGravity(Gravity.CENTER);
-
         setCancelable(true);
-
         binding.wholeCard.setCardBackgroundColor(WHOLE_BACKGROUND_COLOR_DEFAULT);
-
         binding.positiveButtonBg.setCardBackgroundColor(WHOLE_BACKGROUND_COLOR_DEFAULT);
-
         binding.wholeCard.setRadius(WHOLE_CORNER_RADIUS_DEFAULT * 4);
 
 
+        // padding
         binding.padding1.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, WHOLE_PADDING_DEFAULT * 4));
         binding.padding2.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, WHOLE_PADDING_DEFAULT * 2));
         binding.padding3.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, WHOLE_PADDING_DEFAULT * 4));
@@ -83,20 +79,18 @@ public class CuteDialog extends Dialog {
             binding.padding6.setVisibility(View.GONE);
         }
 
+        // close icon
         binding.closeIcon.setImageResource(R.drawable.cute_dialog_close_icon);
         binding.closeIcon.setColorFilter(CLOSE_ICON_COLOR_DEFAULT);
-
-
-        // closeIcon size
-
         binding.closeIcon.getLayoutParams().height = CLOSE_ICON_SIZE_DEFAULT * 2;
         binding.closeIcon.getLayoutParams().width = CLOSE_ICON_SIZE_DEFAULT * 2;
 
-
+        // header visibility
         binding.mainIcon.setVisibility(View.VISIBLE);
         binding.mainImage.setVisibility(View.GONE);
         binding.mainAnimation.setVisibility(View.GONE);
 
+        // header content
         binding.mainIcon.setImageResource(R.drawable.cute_dialog_icon);
         binding.mainImage.setImageResource(R.drawable.cute_dialog_demo_image);
         binding.mainAnimation.setAnimation(R.raw.cute_dialog_demo_anim);
@@ -104,53 +98,32 @@ public class CuteDialog extends Dialog {
 
         // title Text
         binding.titleText.setText(TITLE_TEXT_DEFAULT);
-
-
         binding.titleText.setTextSize(TypedValue.COMPLEX_UNIT_SP, TITLE_TEXT_SIZE_DEFAULT);
-
-
         binding.titleText.setTextColor(TITLE_TEXT_COLOR_DEFAULT);
-
-
         binding.titleText.setTypeface(binding.titleText.getTypeface(), Typeface.BOLD);
 
 
         // description Text
         binding.descText.setText(DESC_TEXT_DEFAULT);
-
         binding.descText.setTextSize(TypedValue.COMPLEX_UNIT_SP, DESC_TEXT_SIZE_DEFAULT);
-
-
         binding.descText.setTextColor(DESC_TEXT_COLOR_DEFAULT);
-
-
         binding.descText.setTypeface(binding.descText.getTypeface(), Typeface.NORMAL);
 
 
-        // button corner radius
-
-
+        // button style
         binding.positiveButton.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
         binding.negativeButton.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
         binding.positiveButtonBg.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
-
-
         binding.positiveButton.setCardBackgroundColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
         binding.negativeButton.setCardBackgroundColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
 
 
+        // button text
         binding.positiveText.setTextSize(TypedValue.COMPLEX_UNIT_SP, BUTTON_TEXT_SIZE_DEFAULT);
         binding.negativeText.setTextSize(TypedValue.COMPLEX_UNIT_SP, BUTTON_TEXT_SIZE_DEFAULT);
-
-
-        // positive text
         binding.positiveText.setText(POSITIVE_BUTTON_TEXT_DEFAULT);
-
         binding.positiveText.setTextColor(POSITIVE_BUTTON_TEXT_COLOR_DEFAULT);
-
-        // negative text
         binding.negativeText.setText(NEGATIVE_BUTTON_TEXT_DEFAULT);
-
         binding.negativeText.setTextColor(NEGATIVE_BUTTON_TEXT_COLOR_DEFAULT);
 
 
@@ -398,7 +371,7 @@ public class CuteDialog extends Dialog {
         return this;
     }
 
-    public CuteDialog setPositiveText(String positiveText, int textColor,  int textStyle) {
+    public CuteDialog setPositiveText(String positiveText, int textColor, int textStyle) {
         binding.positiveText.setText(positiveText);
         if (textColor != 0) {
             try {
@@ -424,7 +397,7 @@ public class CuteDialog extends Dialog {
         return this;
     }
 
-    public CuteDialog setNegativeText(String negativeText, int textColor,  int textStyle) {
+    public CuteDialog setNegativeText(String negativeText, int textColor, int textStyle) {
 
         binding.negativeText.setText(negativeText);
         if (textColor != 0) {
@@ -452,49 +425,47 @@ public class CuteDialog extends Dialog {
     }
 
 
-    public CuteDialog setVisibilityOptions(boolean hideCloseIcon,boolean hideTitle, boolean hideDesc, boolean hidePositiveButton, boolean hideNegativeButton) {
+    public CuteDialog setVisibilityOptions(boolean hideCloseIcon, boolean hideTitle, boolean hideDesc, boolean hidePositiveButton, boolean hideNegativeButton) {
 
-            if (hideCloseIcon) {
-                binding.closeIcon.setVisibility(View.GONE);
-            } else {
-                binding.closeIcon.setVisibility(View.VISIBLE);
-            }
+        if (hideCloseIcon) {
+            binding.closeIcon.setVisibility(View.GONE);
+        } else {
+            binding.closeIcon.setVisibility(View.VISIBLE);
+        }
 
-            if (hideTitle) {
-                binding.titleText.setVisibility(View.GONE);
-            } else {
-                binding.titleText.setVisibility(View.VISIBLE);
-            }
+        if (hideTitle) {
+            binding.titleText.setVisibility(View.GONE);
+        } else {
+            binding.titleText.setVisibility(View.VISIBLE);
+        }
 
-            if (hideDesc) {
-                binding.descText.setVisibility(View.GONE);
-            } else {
-                binding.descText.setVisibility(View.VISIBLE);
-            }
+        if (hideDesc) {
+            binding.descText.setVisibility(View.GONE);
+        } else {
+            binding.descText.setVisibility(View.VISIBLE);
+        }
 
-            if (hidePositiveButton) {
-                binding.positiveButton.setVisibility(View.GONE);
-            } else {
-                binding.positiveButton.setVisibility(View.VISIBLE);
-            }
+        if (hidePositiveButton) {
+            binding.positiveButton.setVisibility(View.GONE);
+        } else {
+            binding.positiveButton.setVisibility(View.VISIBLE);
+        }
 
-            if (hideNegativeButton) {
-                binding.negativeButton.setVisibility(View.GONE);
-            } else {
-                binding.negativeButton.setVisibility(View.VISIBLE);
-            }
+        if (hideNegativeButton) {
+            binding.negativeButton.setVisibility(View.GONE);
+        } else {
+            binding.negativeButton.setVisibility(View.VISIBLE);
+        }
 
-            if (hideNegativeButton || hidePositiveButton) {
-                binding.padding4.setVisibility(View.GONE);
-            } else {
-                binding.padding4.setVisibility(View.VISIBLE);
-            }
+        if (hideNegativeButton || hidePositiveButton) {
+            binding.padding4.setVisibility(View.GONE);
+        } else {
+            binding.padding4.setVisibility(View.VISIBLE);
+        }
 
-            return this;
+        return this;
 
     }
-
-
 
     public CuteDialog setPositiveListener(View.OnClickListener listener) {
         binding.positiveButton.setOnClickListener(v -> {
