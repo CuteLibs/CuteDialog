@@ -141,6 +141,16 @@ public class CuteDialog extends Dialog {
         binding.negativeText.setText(NEGATIVE_BUTTON_TEXT_DEFAULT);
         binding.negativeText.setTextColor(NEGATIVE_BUTTON_TEXT_COLOR_DEFAULT);
 
+        // button click
+        binding.positiveButton.setOnClickListener(v -> {
+            dismiss();
+        });
+        binding.negativeButton.setOnClickListener(v -> {
+            dismiss();
+        });
+        binding.closeIcon.setOnClickListener(v -> {
+            dismiss();
+        });
 
     }
 
