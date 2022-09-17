@@ -247,18 +247,22 @@ public class CuteDialog extends Dialog {
             binding.mainIcon.setVisibility(View.VISIBLE);
             binding.mainImage.setVisibility(View.GONE);
             binding.mainAnimation.setVisibility(View.GONE);
+            binding.padding6.setVisibility(View.VISIBLE);
         } else if (chooser == 2) {
             binding.mainIcon.setVisibility(View.GONE);
             binding.mainImage.setVisibility(View.VISIBLE);
             binding.mainAnimation.setVisibility(View.GONE);
+            binding.padding6.setVisibility(View.GONE);
         } else if (chooser == 3) {
             binding.mainIcon.setVisibility(View.GONE);
             binding.mainImage.setVisibility(View.GONE);
             binding.mainAnimation.setVisibility(View.VISIBLE);
+            binding.padding6.setVisibility(View.GONE);
         } else {
             binding.mainIcon.setVisibility(View.VISIBLE);
             binding.mainImage.setVisibility(View.GONE);
             binding.mainAnimation.setVisibility(View.GONE);
+            binding.padding6.setVisibility(View.VISIBLE);
         }
 
         return this;
