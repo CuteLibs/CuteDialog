@@ -7,7 +7,7 @@
     android:layout_gravity="center">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/main_card"
+        android:id="@+id/whole_card"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -19,65 +19,121 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/main_animation"
+            <RelativeLayout
+                android:id="@+id/header_holder"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:visibility="gone"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/cute_confimer_demo_anim" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
-            <ImageView
-                android:id="@+id/main_image"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:src="@drawable/cute_confirmer_demo_image"
-                android:visibility="visible"
-                tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/main_icon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/ic_cute_confirmer"
-                android:visibility="gone"
-                tools:ignore="ContentDescription" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/padding6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"/>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/main_animation"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:visibility="gone"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/cute_confimer_demo_anim" />
+
+                    <ImageView
+                        android:id="@+id/main_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/cute_confirmer_demo_image"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/main_icon"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_cute_confirmer"
+                        android:visibility="visible"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/close_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_close_cute_confirmer"
+                    android:visibility="visible"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/padding1"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" />
 
             <TextView
                 android:id="@+id/title_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="5dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
+                android:padding="5dp"
                 android:text="@string/demo_title"
                 android:textColor="@color/cute_confirmer_main"
                 android:textSize="20sp" />
 
+            <View
+                android:id="@+id/padding2"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" />
+
 
             <TextView
                 android:id="@+id/desc_text"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="5dp"
                 android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:text="@string/demo_des"
                 android:textColor="@color/cute_confirmer_text"
                 android:textSize="14sp" />
 
+            <View
+                android:id="@+id/padding3"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" />
+
 
             <LinearLayout
+                android:id="@+id/button_holder"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -86,12 +142,14 @@
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_gravity="center"
                     app:cardBackgroundColor="@color/cute_confirmer_main"
                     app:cardCornerRadius="10dp">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="99dp"
-                        android:layout_height="39dp"
+                        android:id="@+id/positive_button_bg"
+                        android:layout_width="98dp"
+                        android:layout_height="38dp"
                         android:layout_gravity="center"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="0dp">
@@ -109,6 +167,11 @@
                     </androidx.cardview.widget.CardView>
 
                 </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/padding4"
+                    android:layout_width="1dp"
+                    android:layout_height="10dp" />
 
 
                 <androidx.cardview.widget.CardView
@@ -132,6 +195,11 @@
 
 
             </LinearLayout>
+
+            <View
+                android:id="@+id/padding5"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" />
 
 
         </LinearLayout>
