@@ -17,6 +17,11 @@ import android.widget.LinearLayout;
 
 import androidx.core.content.ContextCompat;
 
+/**
+ * Created by ahmmedrejowan with CuteLibs on 2022.
+ */
+
+
 
 public class CuteDialog extends Dialog {
 
