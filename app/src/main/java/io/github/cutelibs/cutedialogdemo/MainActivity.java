@@ -1,16 +1,13 @@
 package io.github.cutelibs.cutedialogdemo;
 
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import io.github.cutelibs.cutedialog.CuteDialog;
-import io.github.cutelibs.cutedialog.DialogEnums;
 
 public class MainActivity extends AppCompatActivity {
 

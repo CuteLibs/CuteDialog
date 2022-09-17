@@ -25,6 +25,7 @@ import androidx.core.content.ContextCompat;
 
 public class CuteDialog extends Dialog {
 
+    // Default Value
     private static final int WHOLE_BACKGROUND_COLOR_DEFAULT = Color.parseColor("#FFFFFF");
     private static final int CLOSE_ICON_COLOR_DEFAULT = Color.parseColor("#A0A0A0");
     private static final int TITLE_TEXT_COLOR_DEFAULT = Color.parseColor("#398AB9");
@@ -43,7 +44,20 @@ public class CuteDialog extends Dialog {
     private static final String NEGATIVE_BUTTON_TEXT_DEFAULT = "No";
     private static final String TITLE_TEXT_DEFAULT = "Delete File!";
     private static final String DESC_TEXT_DEFAULT = "Do you want to delete this file?";
-    private static int HEADER_CHOOSER = 1;
+
+    // Enums
+    public static final int POSITION_CENTER = 1;
+    public static final int POSITION_TOP = 2;
+    public static final int POSITION_BOTTOM = 3;
+    public static final int STYLE_NORMAL = 1;
+    public static final int STYLE_BOLD = 2;
+    public static final int STYLE_ITALIC = 3;
+    public static final int STYLE_BOLD_ITALIC = 4;
+    public static final int HEADER_ICON = 1;
+    public static final int HEADER_IMAGE = 2;
+    public static final int HEADER_ANIMATION = 3;
+
+    private int HEADER_CHOOSER = 1;
     private final Context context;
 
     io.github.cutelibs.cutedialog.databinding.CuteDialogMainLayoutBinding binding;
