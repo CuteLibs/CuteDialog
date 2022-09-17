@@ -145,7 +145,7 @@ public class CuteDialog extends Dialog {
         binding.positiveButton.setOnClickListener(v -> {
             dismiss();
         });
-        binding.negativeButton.setOnClickListener(v -> {
+        binding.negativeButtonBg.setOnClickListener(v -> {
             dismiss();
         });
         binding.closeIcon.setOnClickListener(v -> {
