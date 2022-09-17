@@ -19,10 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Button b = findViewById(R.id.button);
         b.setOnClickListener(v -> {
-
             new CuteDialog(this)
                     .isCancelable(true)
                     .setPositiveListener(v1 -> {
