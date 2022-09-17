@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                     .setNegativeListener(v2 -> {
                         Toast.makeText(MainActivity.this, "Negative", Toast.LENGTH_SHORT).show();
                     })
-                    .setOnCloseListener(v3 -> {
+                    .setCloseListener(v3 -> {
                             Toast.makeText(MainActivity.this, "Dismiss", Toast.LENGTH_SHORT).show();
                     })
                     .show();

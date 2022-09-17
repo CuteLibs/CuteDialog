@@ -146,7 +146,7 @@
                     app:cardCornerRadius="10dp">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/positive_button_bg"
+                        android:id="@+id/negative_button_bg"
                         android:layout_width="98dp"
                         android:layout_height="38dp"
                         android:layout_gravity="center"

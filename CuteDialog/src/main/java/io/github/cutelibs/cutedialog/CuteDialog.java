@@ -22,9 +22,19 @@ import androidx.core.content.ContextCompat;
  */
 
 
-
 public class CuteDialog extends Dialog {
 
+    // Enums
+    public static final int POSITION_CENTER = 1;
+    public static final int POSITION_TOP = 2;
+    public static final int POSITION_BOTTOM = 3;
+    public static final int STYLE_NORMAL = 1;
+    public static final int STYLE_BOLD = 2;
+    public static final int STYLE_ITALIC = 3;
+    public static final int STYLE_BOLD_ITALIC = 4;
+    public static final int HEADER_ICON = 1;
+    public static final int HEADER_IMAGE = 2;
+    public static final int HEADER_ANIMATION = 3;
     // Default Value
     private static final int WHOLE_BACKGROUND_COLOR_DEFAULT = Color.parseColor("#FFFFFF");
     private static final int CLOSE_ICON_COLOR_DEFAULT = Color.parseColor("#A0A0A0");
@@ -44,23 +54,9 @@ public class CuteDialog extends Dialog {
     private static final String NEGATIVE_BUTTON_TEXT_DEFAULT = "No";
     private static final String TITLE_TEXT_DEFAULT = "Delete File!";
     private static final String DESC_TEXT_DEFAULT = "Do you want to delete this file?";
-
-    // Enums
-    public static final int POSITION_CENTER = 1;
-    public static final int POSITION_TOP = 2;
-    public static final int POSITION_BOTTOM = 3;
-    public static final int STYLE_NORMAL = 1;
-    public static final int STYLE_BOLD = 2;
-    public static final int STYLE_ITALIC = 3;
-    public static final int STYLE_BOLD_ITALIC = 4;
-    public static final int HEADER_ICON = 1;
-    public static final int HEADER_IMAGE = 2;
-    public static final int HEADER_ANIMATION = 3;
-
-    private int HEADER_CHOOSER = 1;
     private final Context context;
-
     io.github.cutelibs.cutedialog.databinding.CuteDialogMainLayoutBinding binding;
+    private int HEADER_CHOOSER = 1;
 
 
     public CuteDialog(Context context) {
@@ -82,7 +78,7 @@ public class CuteDialog extends Dialog {
         getWindow().setGravity(Gravity.CENTER);
         setCancelable(true);
         binding.wholeCard.setCardBackgroundColor(WHOLE_BACKGROUND_COLOR_DEFAULT);
-        binding.positiveButtonBg.setCardBackgroundColor(WHOLE_BACKGROUND_COLOR_DEFAULT);
+        binding.negativeButtonBg.setCardBackgroundColor(WHOLE_BACKGROUND_COLOR_DEFAULT);
         binding.wholeCard.setRadius(WHOLE_CORNER_RADIUS_DEFAULT * 4);
 
 
@@ -132,7 +128,7 @@ public class CuteDialog extends Dialog {
         // button style
         binding.positiveButton.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
         binding.negativeButton.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
-        binding.positiveButtonBg.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
+        binding.negativeButtonBg.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
         binding.positiveButton.setCardBackgroundColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
         binding.negativeButton.setCardBackgroundColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
 
@@ -166,10 +162,10 @@ public class CuteDialog extends Dialog {
         if (bgColor != 0) {
             try {
                 binding.wholeCard.setCardBackgroundColor(ContextCompat.getColor(context, bgColor));
-                binding.positiveButtonBg.setCardBackgroundColor(ContextCompat.getColor(context, bgColor));
+                binding.negativeButtonBg.setCardBackgroundColor(ContextCompat.getColor(context, bgColor));
             } catch (Resources.NotFoundException e) {
                 binding.wholeCard.setCardBackgroundColor(bgColor);
-                binding.positiveButtonBg.setCardBackgroundColor(bgColor);
+                binding.negativeButtonBg.setCardBackgroundColor(bgColor);
             }
         }
 
@@ -366,7 +362,7 @@ public class CuteDialog extends Dialog {
         if (radiusOfButton != 0) {
             binding.positiveButton.setRadius(radiusOfButton * 4);
             binding.negativeButton.setRadius(radiusOfButton * 4);
-            binding.positiveButtonBg.setRadius(radiusOfButton * 4);
+            binding.negativeButtonBg.setRadius(radiusOfButton * 4);
 
         }
 
@@ -495,14 +491,14 @@ public class CuteDialog extends Dialog {
     }
 
     public CuteDialog setNegativeListener(View.OnClickListener listener) {
-        binding.negativeButton.setOnClickListener(v -> {
+        binding.negativeButtonBg.setOnClickListener(v -> {
             listener.onClick(v);
             dismiss();
         });
         return this;
     }
 
-    public CuteDialog setOnCloseListener(View.OnClickListener listener) {
+    public CuteDialog setCloseListener(View.OnClickListener listener) {
         binding.closeIcon.setOnClickListener(v -> {
             listener.onClick(v);
             dismiss();
