@@ -17,19 +17,6 @@
 ## Purpose
 <b>CuteDialog</b> is a Highly Customizable Material Design Android Library. <b>CuteDialog</b> allows developer to create beautiful dialogs with <b>material design</b>. It is highly <b>customizable</b> and can be used for lots of different purposes.
 
-## Screenshot
-
-| Icon | Image | Animation |
-|---------|--------|----------|
-| ![icon](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot1.png) | ![image](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot2.png) | ![animation](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot3.gif) |
-
-
-
-## Demo
-Download and Check out the demo app for more
-
-<a href="https://github.com/instaal-io/updaate/blob/master/app_release.apk"> <img src="https://user-images.githubusercontent.com/42619122/155009169-c92bbebb-7e96-452e-956b-b5905d2cdcdc.png" height="100" width="200" alt="Download"/> </a>
-
 ## Features
 - Material Design UI
 - 3 Header Designs
@@ -44,8 +31,90 @@ This library is built by this conifg:
 - Androidx Library
 - <a href="https://github.com/airbnb/lottie-android">Lottie</a> for Animation
 
+## Screenshot
+
+| Icon | Image | Animation |
+|---------|--------|----------|
+| ![icon](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot1.png) | ![image](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot2.png) | ![animation](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot3.gif) |
 
 
+## Demo
+<a href="https://rejowan.com">Download</a> and Give it a try.
 
 
+## Prerequisites
 
+#### Old
+If you're using old gradle versions then follow this.
+Add this in your root `build.gradle` :
+
+```gradle
+allprojects {
+	repositories {
+		...
+		maven { url "https://jitpack.io" }
+	}
+}
+```
+
+#### New
+If you're using new gradle versions then follow this.
+Add this in your `settings.gradle` file:
+
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+       ...
+        maven { url 'https://jitpack.io' }
+
+    }
+}
+```
+
+## Dependencies
+Add this to your app level `build.gradle`:
+
+(Always use the latest version. Current Latest version is <a href="https://jitpack.io/#CuteLibs/CuteDialog"><img src="https://jitpack.io/v/CuteLibs/CuteDialog.svg" alt="JitPack"></a> )
+
+```gradle
+dependencies {
+	...
+		implementation 'com.github.CuteLibs:CuteDialog:beta-0.3'
+
+}
+```
+
+
+## Contribute
+Please fork this repository and contribute back using [pull requests](https://github.com/CuteLibs/CuteDialog/pulls).
+
+Any contributions, large or small, major features, bug fixes, are welcomed and appreciated.
+
+Let me know which features you want in the future in `Request Feature` tab. 
+
+If this project helps you a little bit, then give a to Star ⭐ the Repo. 
+
+## Credits
+
+Created with ❤️ by <a href="https://github.com/CuteLibs"> CuteLibs </a> & <a href="https://github.com/ahmmedrejowan"> K M Rejowan Ahmmed </a>
+
+## License
+* [Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+```
+Copyright 2022 CuteLibs
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+```
