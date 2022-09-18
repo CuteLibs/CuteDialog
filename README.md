@@ -1,4 +1,6 @@
-<h1 align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/library_icon.png" height="30" weight="30" alt="GitHub forks"> <b>Cute Dialog</b></h1>
+<p align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/library_icon.png" height="100" weight="100" alt="GitHub forks">  </p>
+
+<h1 align="center"><b>Cute Dialog</b></h1>
 <p align="center"><b>A Custom Material Design Dialog Library for Android</b></p>
 
 <br/>
@@ -10,3 +12,5 @@
  <p align="center">
  <a href="https://github.com/CuteLibs/CuteDialog/issues"><img src="https://img.shields.io/github/issues/CuteLibs/CuteDialog" alt="GitHub issues"></a> <a href="https://github.com/CuteLibs/CuteDialog/network"><img src="https://img.shields.io/github/forks/CuteLibs/CuteDialog" alt="GitHub forks"></a> <a href="https://github.com/CuteLibs/CuteDialog/stargazers"><img src="https://img.shields.io/github/stars/CuteLibs/CuteDialog" alt="GitHub stars"></a> <a href="https://github.com/CuteLibs/CuteDialog/graphs/contributors"> <img src="https://img.shields.io/github/contributors/CuteLibs/CuteDialog" alt="GitHub contributors"></a> <img src="https://img.shields.io/github/languages/code-size/CuteLibs/CuteDialog" alt="Code Size"> 
   </p>
+
+
