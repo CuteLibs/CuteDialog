@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://github.com/CuteLibs/CuteDialog/blob/master/files/library_icon.png" height="30" weight="30" alt="GitHub forks"> <b>Cute Dialog</b></h1>
+<h1 align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/library_icon.png" height="30" weight="30" alt="GitHub forks"> <b>Cute Dialog</b></h1>
 <p align="center"><b>A Custom Material Design Dialog Library for Android</b></p>
 
 <br/>
