@@ -105,11 +105,6 @@ public class CuteDialog extends Dialog {
         binding.mainImage.setVisibility(View.GONE);
         binding.mainAnimation.setVisibility(View.GONE);
 
-        // header content
-        binding.mainIcon.setImageResource(R.drawable.cute_dialog_icon);
-        binding.mainImage.setImageResource(R.drawable.cute_dialog_demo_image);
-        binding.mainAnimation.setAnimation(R.raw.cute_dialog_demo_anim);
-
 
         // title Text
         binding.titleText.setText(TITLE_TEXT_DEFAULT);
@@ -269,35 +264,29 @@ public class CuteDialog extends Dialog {
     }
 
     public CuteDialog setHeaderIcon(int icon) {
-        if (icon != 0) {
-            try {
-                binding.mainIcon.setImageResource(icon);
-            } catch (Resources.NotFoundException e) {
-                binding.mainIcon.setImageResource(R.drawable.cute_dialog_icon);
-            }
+        try {
+            binding.mainIcon.setImageResource(icon);
+        } catch (Resources.NotFoundException e) {
+            e.printStackTrace();
         }
         return this;
     }
 
     public CuteDialog setHeaderImage(int image) {
-        if (image != 0) {
-            try {
-                binding.mainImage.setImageResource(image);
-            } catch (Resources.NotFoundException e) {
-                binding.mainImage.setImageResource(R.drawable.cute_dialog_demo_image);
-            }
+        try {
+            binding.mainImage.setImageResource(image);
+        } catch (Resources.NotFoundException e) {
+            e.printStackTrace();
         }
 
         return this;
     }
 
     public CuteDialog setHeaderAnimation(int animation) {
-        if (animation != 0) {
-            try {
-                binding.mainAnimation.setAnimation(animation);
-            } catch (Resources.NotFoundException e) {
-                binding.mainAnimation.setAnimation(R.raw.cute_dialog_demo_anim);
-            }
+        try {
+            binding.mainAnimation.setAnimation(animation);
+        } catch (Resources.NotFoundException e) {
+            e.printStackTrace();
         }
 
         return this;

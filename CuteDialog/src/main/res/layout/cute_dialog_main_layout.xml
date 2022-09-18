@@ -44,8 +44,7 @@
                         android:layout_height="150dp"
                         android:visibility="gone"
                         app:lottie_autoPlay="true"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/cute_dialog_demo_anim" />
+                        app:lottie_loop="true" />
 
                     <ImageView
                         android:id="@+id/main_image"
@@ -53,7 +52,6 @@
                         android:layout_height="150dp"
                         android:layout_gravity="center"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/cute_dialog_demo_image"
                         android:visibility="gone"
                         tools:ignore="ContentDescription" />
 
@@ -63,7 +61,6 @@
                         android:layout_height="80dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/cute_dialog_icon"
                         android:visibility="visible"
                         tools:ignore="ContentDescription" />
 
