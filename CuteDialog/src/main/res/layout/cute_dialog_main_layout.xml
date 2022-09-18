@@ -61,6 +61,7 @@
                         android:layout_height="80dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_emoji"
                         android:visibility="visible"
                         tools:ignore="ContentDescription" />
 
@@ -73,10 +74,7 @@
                     android:layout_height="30dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_margin="15dp"
                     android:src="@drawable/cute_dialog_close_icon"
                     android:visibility="visible"
                     tools:ignore="ContentDescription" />
@@ -97,7 +95,7 @@
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="@string/demo_title"
-                android:textColor="@color/cute_confirmer_main"
+                android:textColor="@color/cute_dialog_main"
                 android:textSize="20sp" />
 
             <View
@@ -111,12 +109,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:padding="5dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:padding="5dp"
                 android:text="@string/demo_des"
-                android:textColor="@color/cute_confirmer_text"
+                android:textColor="@color/cute_dialog_text"
                 android:textSize="14sp" />
 
             <View
@@ -135,15 +133,15 @@
                 android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/negative_button"
+                    android:id="@+id/negative_button_border"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="@color/cute_confirmer_main"
+                    app:cardBackgroundColor="@color/cute_dialog_main"
                     app:cardCornerRadius="10dp">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/negative_button_bg"
+                        android:id="@+id/negative_button"
                         android:layout_width="98dp"
                         android:layout_height="38dp"
                         android:layout_gravity="center"
@@ -159,7 +157,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:text="@string/demo_negative_text"
-                            android:textColor="@color/cute_confirmer_text"
+                            android:textColor="@color/cute_dialog_text"
                             android:textSize="16sp" />
 
 
@@ -174,24 +172,36 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/positive_button"
+                    android:id="@+id/positive_button_border"
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
-                    app:cardBackgroundColor="@color/cute_confirmer_main"
+                    app:cardBackgroundColor="@color/cute_dialog_main"
                     app:cardCornerRadius="10dp">
 
-                    <TextView
-                        android:id="@+id/positive_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="@string/demo_positive_text"
-                        android:textColor="#fff"
-                        android:textSize="16sp" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/positive_button"
+                        android:layout_width="98dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center"
+                        app:cardBackgroundColor="@color/cute_dialog_main"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
 
+                        <TextView
+                            android:id="@+id/positive_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/demo_positive_text"
+                            android:textColor="#fff"
+                            android:textSize="16sp" />
+                    </androidx.cardview.widget.CardView>
                 </androidx.cardview.widget.CardView>
 
 

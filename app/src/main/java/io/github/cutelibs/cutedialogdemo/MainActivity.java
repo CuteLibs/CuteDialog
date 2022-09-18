@@ -1,7 +1,5 @@
 package io.github.cutelibs.cutedialogdemo;
 
-
-import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -17,11 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button b = findViewById(R.id.button);
-        b.setOnClickListener(v -> {
-            new CuteDialog(this)
-                    .show();
-
-        });
+        b.setOnClickListener(v -> new CuteDialog(this)
+                .show());
 
 
     }
