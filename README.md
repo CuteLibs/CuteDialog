@@ -12,10 +12,11 @@
   
  <p align="center"> <img src="https://github.com/CuteLibs/CuteDialog/actions/workflows/android.yml/badge.svg" alt="Build"/> <a href="https://www.codacy.com/gh/CuteLibs/CuteDialog/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CuteLibs/CuteDialog&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/b46743b23bf041819fb5232ba87fb17e" alt="Code Quality"></a> <a href="https://www.codefactor.io/repository/github/cutelibs/cutedialog"><img src="https://www.codefactor.io/repository/github/cutelibs/cutedialog/badge" alt="CodeFactor" /></a> </p>
 
- <hr> 
+<br/>
 
-<br/>
-<br/>
+## Purpose
+<b>CuteDialog</b> is a Highly Customizable Material Design Android Library. <b>CuteDialog</b> allows developer to create beautiful dialogs with <b>material design</b>. It is highly <b>customizable</b> and can be used for lots of different purposes.
+
 
 
 
