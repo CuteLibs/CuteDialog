@@ -17,6 +17,8 @@ import android.widget.LinearLayout;
 
 import androidx.core.content.ContextCompat;
 
+import io.github.cutelibs.cutedialog.databinding.CuteDialogMainLayoutBinding;
+
 /**
  * Created by ahmmedrejowan with CuteLibs on 2022.
  */
@@ -55,14 +57,14 @@ public class CuteDialog extends Dialog {
     private static final String TITLE_TEXT_DEFAULT = "Download!";
     private static final String DESC_TEXT_DEFAULT = "Do you want to download this file?";
     private final Context context;
-    io.github.cutelibs.cutedialog.databinding.CuteDialogMainLayoutBinding binding;
+    CuteDialogMainLayoutBinding binding;
     private int HEADER_CHOOSER = 1;
 
 
     public CuteDialog(Context context) {
         super(context);
         this.context = context;
-        binding = io.github.cutelibs.cutedialog.databinding.CuteDialogMainLayoutBinding.inflate(LayoutInflater.from(context));
+        binding = CuteDialogMainLayoutBinding.inflate(LayoutInflater.from(context));
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
