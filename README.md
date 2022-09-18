@@ -25,6 +25,25 @@
 
 
 
+## Demo
+Download and Check out the demo app for more
+
+<a href="https://github.com/instaal-io/updaate/blob/master/app_release.apk"> <img src="https://user-images.githubusercontent.com/42619122/155009169-c92bbebb-7e96-452e-956b-b5905d2cdcdc.png" height="100" width="200" alt="Download"/> </a>
+
+## Features
+- Material Design UI
+- 3 Header Designs
+- Highly Customizable
+
+## Build Info
+This library is built by this conifg:
+- Minimum SDK 21
+- Compile SDK 32
+- Target SDK 32
+- Built on Java 1.8
+- Androidx Library
+- <a href="https://github.com/airbnb/lottie-android">Lottie</a> for Animation
+
 
 
 
