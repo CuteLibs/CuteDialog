@@ -1,5 +1,6 @@
 package io.github.cutelibs.cutedialogdemo;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Button;
 
