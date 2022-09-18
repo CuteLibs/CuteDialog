@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.CuteConfirmer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.CuteDialog" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/cute_dialog_main_0</item>
         <item name="colorPrimaryVariant">@color/cute_dialog_main_1</item>
