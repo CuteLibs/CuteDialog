@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("io.github.cutelibs.cuteconfirmer.test", appContext.getPackageName());
+        assertEquals("io.github.cutelibs.cutedialog.test", appContext.getPackageName());
     }
 }

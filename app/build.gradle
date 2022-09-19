@@ -1,5 +1,15 @@
 plugins {
     id 'com.android.application'
+    id "org.sonarqube" version "3.4.0.2513"
+
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "CuteLibs_CuteDialog"
+        property "sonar.organization", "cutelibs"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
 }
 
 android {

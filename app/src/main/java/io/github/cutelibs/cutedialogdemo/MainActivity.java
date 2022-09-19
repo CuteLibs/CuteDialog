@@ -2,6 +2,7 @@ package io.github.cutelibs.cutedialogdemo;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -77,12 +78,26 @@ public class MainActivity extends AppCompatActivity {
 
         binding.design7.setOnClickListener(v -> {
             new CuteDialog(this)
+                    .setDialogStyle(Color.WHITE,10,CuteDialog.POSITION_CENTER,10)
+                    .isCancelable(true)
+                    .setCloseIconStyle(0,30,Color.DKGRAY)
                     .setHeader(CuteDialog.HEADER_IMAGE)
                     .setHeaderImage(R.drawable.image_4)
                     .setTitle("Something is Wrong", 0, Color.parseColor("#673AB7"), 0)
                     .setDesc("I don't know what went wrong, but there is a problem.", 0, 0, 0)
+                    .setPositiveButtonText("Try Again",  Color.parseColor("#673AB7"), 0)
+                    .setNegativeButtonText("Cancel",  Color.parseColor("#673AB7"), 0)
                     .setPositiveButtonStyle(0, Color.parseColor("#673AB7"), 0, 0)
                     .setNegativeButtonStyle(0, 0, Color.parseColor("#673AB7"), 0)
+                    .setPositiveButtonListener(v1 -> {
+                        Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButtonListener(v12 -> {
+                        Toast.makeText(this, "Negative Button Clicked", Toast.LENGTH_SHORT).show();
+                    })
+                    .setCloseListener(v13 -> {
+                        Toast.makeText(this, "Close Icon Clicked", Toast.LENGTH_SHORT).show();
+                    })
                     .show();
         });
 
