@@ -51,7 +51,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Run Unit Test
-        uses: ./gradlew testDebugUnitTest
+        run: ./gradlew testDebugUnitTest
 
       - name: Upload Report
         uses: actions/upload-artifact@v3
