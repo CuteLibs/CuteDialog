@@ -7,34 +7,34 @@ on:
     branches: [ "master" ]
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Code Checkout
-        uses: actions/checkout@v3
-
-      - name: set up JDK 11
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'temurin'
-          cache: gradle
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build with Gradle
-        run: ./gradlew lint
-
-      - name: Upload Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: lint.html
-          path: CuteDialog/build/reports/lint-results-debug.html
+#  lint:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Code Checkout
+#        uses: actions/checkout@v3
+#
+#      - name: set up JDK 11
+#        uses: actions/setup-java@v3
+#        with:
+#          java-version: '11'
+#          distribution: 'temurin'
+#          cache: gradle
+#
+#      - name: Grant execute permission for gradlew
+#        run: chmod +x gradlew
+#
+#      - name: Build with Gradle
+#        run: ./gradlew lint
+#
+#      - name: Upload Report
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: lint.html
+#          path: CuteDialog/build/reports/lint-results-debug.html
 
 
   unit-test:
-    needs: [ lint ]
+  #  needs: [ lint ]
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
@@ -50,9 +50,8 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-
       - name: Run Unit Test
-        uses: ./gradlew test
+        uses: ./gradlew testDebugUnitTest
 
       - name: Upload Report
         uses: actions/upload-artifact@v3
