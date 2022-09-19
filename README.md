@@ -18,24 +18,15 @@
 <b>CuteDialog</b> is a Highly Customizable Material Design Android Library. <b>CuteDialog</b> allows developer to create beautiful dialogs with <b>material design</b>. It is highly <b>customizable</b> and can be used for lots of different purposes.
 
 ## Features
-- Material Design UI
-- 3 Header Designs
-- Highly Customizable
+![feature](https://github.com/CuteLibs/CuteDialog/raw/master/files/feature.jpg)
 
-## Build Info
-This library is built by this conifg:
-- Minimum SDK 21
-- Compile SDK 32
-- Target SDK 32
-- Built on Java 1.8
-- Androidx Library
-- <a href="https://github.com/airbnb/lottie-android">Lottie</a> for Animation
 
 ## Screenshot
 
 | Icon | Image | Animation |
 |---------|--------|----------|
 |![icon](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot1.png)|![image](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot2.png)|![animation](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot3.gif)|
+
 
 
 ## Demo
