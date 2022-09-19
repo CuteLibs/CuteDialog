@@ -19,6 +19,7 @@ import androidx.core.content.ContextCompat;
 
 import io.github.cutelibs.cutedialog.databinding.CuteDialogMainLayoutBinding;
 
+
 /**
  * Created by ahmmedrejowan with CuteLibs on 2022.
  */
@@ -54,8 +55,8 @@ public class CuteDialog extends Dialog {
     private static final int BUTTON_TEXT_SIZE_DEFAULT = 16;
     private static final String POSITIVE_BUTTON_TEXT_DEFAULT = "Yes";
     private static final String NEGATIVE_BUTTON_TEXT_DEFAULT = "No";
-    private static final String TITLE_TEXT_DEFAULT = "Download!";
-    private static final String DESC_TEXT_DEFAULT = "Do you want to download this file?";
+    private static final String TITLE_TEXT_DEFAULT = "";
+    private static final String DESC_TEXT_DEFAULT = "";
     private final Context context;
     CuteDialogMainLayoutBinding binding;
     private int HEADER_CHOOSER = 1;
@@ -374,6 +375,12 @@ public class CuteDialog extends Dialog {
                 binding.positiveButtonBorder.setCardBackgroundColor(ContextCompat.getColor(context, outlineOfButton));
             } catch (Resources.NotFoundException e) {
                 binding.positiveButtonBorder.setCardBackgroundColor(outlineOfButton);
+            }
+        } else {
+            try {
+                binding.positiveButtonBorder.setCardBackgroundColor(ContextCompat.getColor(context, bgColorOfButton));
+            } catch (Resources.NotFoundException e) {
+                binding.positiveButtonBorder.setCardBackgroundColor(bgColorOfButton);
             }
         }
 
