@@ -59,42 +59,42 @@ jobs:
 #          name: unit-test-report
 #          path: CuteDialog/build/reports/tests/testDebugUnitTest
 
-  instrumentation-test:
+#  instrumentation-test:
 #    needs: [ unit-test ]
-    runs-on: macos-latest
-    steps:
-      - name: Code Checkout
-        uses: actions/checkout@v3
+#    runs-on: macos-latest
+#    steps:
+#      - name: Code Checkout
+ #       uses: actions/checkout@v3
+#
+#      - name: set up JDK 11
+#        uses: actions/setup-java@v3
+#        with:
+ #         java-version: '11'
+#          distribution: 'temurin'
+ #         cache: gradle
 
-      - name: set up JDK 11
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'temurin'
-          cache: gradle
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+#      - name: Grant execute permission for gradlew
+ #       run: chmod +x gradlew
 
 
-      - name: Run Espresso Test
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: 29
-          script: ./gradlew connectedCheck
+#      - name: Run Espresso Test
+#        uses: reactivecircus/android-emulator-runner@v2
+#        with:
+#          api-level: 29
+#          script: ./gradlew connectedCheck
 
-      - name: Upload Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: intrumentation-test-report
-          path: CuteDialog/build/reports/androidTests/connected/
+#      - name: Upload Report
+ #       uses: actions/upload-artifact@v3
+#        with:
+  #        name: intrumentation-test-report
+  #        path: CuteDialog/build/reports/androidTests/connected/
 
   static-code-analysis:
-    needs: [ instrumentation-test ]
+#    needs: [ instrumentation-test ]
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
-        uses: action/checkout@v3
+        uses: actions/checkout@v3
 
 
       - name: set up JDK 11
