@@ -20,14 +20,19 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Run Lint
-        uses: ./gradlew lint
-
-      - name: Upload Report
-        uses: actions/upload-artifact@v3
+      - run: ./gradlew lint
+      - uses: yutailang0119/action-android-lint@v3
         with:
-          name: lint.html
-          path: CuteDialog/build/reports/lint-results-debug.html
+          report-path: build/reports/lint-results-debug.html
+        continue-on-error: false
+  #      - name: Run Lint
+  #        uses: ./gradlew lint
+  #
+  #      - name: Upload Report
+  #        uses: actions/upload-artifact@v3
+  #        with:
+  #          name: lint.html
+  #          path: CuteDialog/build/reports/lint-results-debug.html
 
   unit-test:
     needs: [ lint ]
