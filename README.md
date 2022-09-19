@@ -71,7 +71,7 @@ Add this to your app level `build.gradle`:
 ```gradle
 dependencies {
 	...
-		implementation 'com.github.CuteLibs:CuteDialog:beta-0.3'
+		implementation 'com.github.CuteLibs:CuteDialog:v-1.0'
 
 }
 ```
@@ -85,6 +85,12 @@ dependencies {
                     .setHeaderIcon(R.drawable.icon_1)
                     .setTitle("Wrong Time", 0, 0, 0)
                     .setDesc("You can't do this right now.\nTry Later", 0, 0, 0)
+		    .setPositiveButtonListener(v1 -> {
+                        Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
+                    }) 
+                    .setNegativeButtonListener(v12 -> {
+                        Toast.makeText(this, "Negative Button Clicked", Toast.LENGTH_SHORT).show();
+                    }) 
                     .show();
 
 ```
