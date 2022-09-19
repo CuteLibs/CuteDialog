@@ -4,4 +4,7 @@
     <color name="cute_dialog_main_1">#347CA6</color>
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
+    <color name="design1">#673AB7</color>
+    <color name="design2">#EC407A</color>
+    <color name="design3">#4CAF50</color>
 </resources>
