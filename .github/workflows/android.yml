@@ -21,7 +21,7 @@ jobs:
           cache: gradle
 
       - name: Run Lint
-      - run: ./gradlew lint
+        uses: ./gradlew lint
 
       - name: Upload Report
         uses: actions/upload-artifact@v3
