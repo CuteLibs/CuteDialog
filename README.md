@@ -35,7 +35,7 @@ This library is built by this conifg:
 
 | Icon | Image | Animation |
 |---------|--------|----------|
-| ![icon](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot1.png) | ![image](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot2.png) | ![animation](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot3.gif) |
+|![icon](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot1.png)|![image](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot2.png)|![animation](https://github.com/CuteLibs/CuteDialog/raw/master/files/shot3.gif)|
 
 
 ## Demo
