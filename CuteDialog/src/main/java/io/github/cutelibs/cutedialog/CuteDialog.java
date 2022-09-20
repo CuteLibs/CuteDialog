@@ -232,12 +232,7 @@ public class CuteDialog extends Dialog {
     public CuteDialog setHeader(int chooser) {
         HEADER_CHOOSER = chooser;
 
-        if (chooser == 1) {
-            binding.mainIcon.setVisibility(View.VISIBLE);
-            binding.mainImage.setVisibility(View.GONE);
-            binding.mainAnimation.setVisibility(View.GONE);
-            binding.padding6.setVisibility(View.VISIBLE);
-        } else if (chooser == 2) {
+        if (chooser == 2) {
             binding.mainIcon.setVisibility(View.GONE);
             binding.mainImage.setVisibility(View.VISIBLE);
             binding.mainAnimation.setVisibility(View.GONE);
