@@ -109,10 +109,11 @@ jobs:
 
 
       - name: SonarClud Scan
-        working-directory: CuteDialog
         run: ./gradlew app:sonarqube -Dsonar.login=${{secrets.SONAR_TOKEN}}
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        with:
+          projectBaseDir: CuteDialog
 
 
   build:
