@@ -350,7 +350,7 @@ public class CuteDialog extends Dialog {
         return this;
     }
 
-    public CuteDialog setPositiveButtonStyle(int radiusOfButton, int bgColorOfButton, int outlineOfButton, int borderWidth, int textSizeInSP) {
+    public CuteDialog setPositiveButtonStyle(int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP) {
 
         if (radiusOfButton != 0) {
             binding.positiveButton.setRadius(radiusOfButton * 4);
@@ -364,11 +364,11 @@ public class CuteDialog extends Dialog {
             }
         }
 
-        if (outlineOfButton != 0) {
+        if (borderColor != 0) {
             try {
-                binding.positiveButton.setStrokeColor(ContextCompat.getColor(context, outlineOfButton));
+                binding.positiveButton.setStrokeColor(ContextCompat.getColor(context, borderColor));
             } catch (Resources.NotFoundException e) {
-                binding.positiveButton.setStrokeColor(outlineOfButton);
+                binding.positiveButton.setStrokeColor(borderColor);
             }
         } else {
             if (bgColorOfButton != 0) {
@@ -393,7 +393,7 @@ public class CuteDialog extends Dialog {
         return this;
     }
 
-    public CuteDialog setNegativeButtonStyle(int radiusOfButton, int bgColorOfButton, int outlineOfButton, int borderWidth, int textSizeInSP) {
+    public CuteDialog setNegativeButtonStyle(int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP) {
 
         if (radiusOfButton != 0) {
             binding.negativeButton.setRadius(radiusOfButton * 4);
@@ -408,11 +408,11 @@ public class CuteDialog extends Dialog {
             }
         }
 
-        if (outlineOfButton != 0) {
+        if (borderColor != 0) {
             try {
-                binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, outlineOfButton));
+                binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, borderColor));
             } catch (Resources.NotFoundException e) {
-                binding.negativeButton.setStrokeColor(outlineOfButton);
+                binding.negativeButton.setStrokeColor(borderColor);
             }
         } else {
             if (bgColorOfButton != 0) {
