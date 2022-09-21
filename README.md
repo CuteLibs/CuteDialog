@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/library_icon.png" height="70" weight="70" alt="GitHub forks"> <img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/Cute_Dialog.png" height="80" alt="Cute Dialog"> </p>
+<p align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/library_icon.png" height="70" alt="GitHub forks"> <img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/Cute_Dialog.png" height="80" alt="Cute Dialog"> </p>
 
 <p align="center"> <a href="https://www.android.com"><img src="https://img.shields.io/badge/platform-Android-yellow.svg" alt="platform"></a>
  <a href="https://android-arsenal.com/api?level=21"><img src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat" alt="API"></a> <a href="https://jitpack.io/#CuteLibs/CuteDialog/"><img src="https://jitpack.io/v/CuteLibs/CuteDialog.svg" alt="JitPack"></a> <a href="https://github.com/CuteLibs/CuteDialog/blob/master/LICENSE"><img src="https://img.shields.io/github/license/CuteLibs/CuteDialog" alt="GitHub license"></a> </p>
@@ -62,6 +62,27 @@ dependencyResolutionManagement {
     }
 }
 ```
+
+## Theme
+For using <b>CuteDialog</b> in your project, you must use <b>Material Theme</B> in your project. You can use <b>CuteDialog</b> in both <b>Material</b>  <b>Light</b> and <b>Dark</b> theme.
+
+For example:
+    
+    ```xml
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    ```
+Or
+
+    ```xml
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+    ```
+
 
 ## Dependencies
 Add this to your app level `build.gradle`:
