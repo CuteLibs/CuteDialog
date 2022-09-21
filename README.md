@@ -68,20 +68,21 @@ For using <b>CuteDialog</b> in your project, you must use <b>Material Theme</B> 
 
 For example:
     
-    ```xml
+ ```xml
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-    ```
+```
 Or
 
-    ```xml
+```xml
 
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Customize your theme here. -->
+    </style>
 
-    ```
+```
 
 
 ## Dependencies
