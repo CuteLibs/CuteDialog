@@ -61,21 +61,22 @@ public class MainActivity extends AppCompatActivity {
                 .setHeader(CuteDialog.HEADER_ANIMATION)
                 .setHeaderAnimation(R.raw.anim3)
                 .setDesc("Message Sent Successfully!", 0, 0, 0)
-                .setVisibilityOptions(false, true, false, false, false)
+                .setVisibilityOptions(false, true, false, false, true)
+                .setPositiveButtonText("Okay", 0, 0)
                 .show());
 
         binding.design7.setOnClickListener(v -> new CuteDialog(this)
-                .setDialogStyle(Color.WHITE,10,CuteDialog.POSITION_CENTER,10)
+                .setDialogStyle(Color.WHITE, 10, CuteDialog.POSITION_CENTER, 10)
                 .isCancelable(true)
-                .setCloseIconStyle(0,30,Color.DKGRAY)
+                .setCloseIconStyle(0, 30, Color.DKGRAY)
                 .setHeader(CuteDialog.HEADER_IMAGE)
                 .setHeaderImage(R.drawable.image_4)
                 .setTitle("Something is Wrong", 0, R.color.design1, 0)
                 .setDesc("I don't know what went wrong, but there is a problem.", 0, 0, 0)
-                .setPositiveButtonText("Try Again",  R.color.design1, 0)
-                .setNegativeButtonText("Cancel",  R.color.design1, 0)
-                .setPositiveButtonStyle(0, R.color.design1, 0, 0)
-                .setNegativeButtonStyle(0, 0, R.color.design1, 0)
+                .setPositiveButtonText("Try Again", R.color.white, 0)
+                .setNegativeButtonText("Cancel", R.color.design1, 0)
+                .setPositiveButtonStyle(0, R.color.design1, Color.RED, 2, 0)
+                .setNegativeButtonStyle(0, 0, R.color.design1, 5, 0)
                 .setPositiveButtonListener(v1 -> Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show())
                 .setNegativeButtonListener(v12 -> Toast.makeText(this, "Negative Button Clicked", Toast.LENGTH_SHORT).show())
                 .setCloseListener(v13 -> Toast.makeText(this, "Close Icon Clicked", Toast.LENGTH_SHORT).show())
@@ -86,8 +87,8 @@ public class MainActivity extends AppCompatActivity {
                 .setHeaderImage(R.drawable.image_5)
                 .setTitle("Time for Study", 0, R.color.design2, 0)
                 .setDesc("It's time for some reading and writing. Take a break from phone.", 0, 0, 0)
-                .setPositiveButtonStyle(0, R.color.design2,0, 0)
-                .setNegativeButtonStyle(0, 0, R.color.design2, 0)
+                .setPositiveButtonStyle(0, R.color.design2, 0, 0, 0)
+                .setNegativeButtonStyle(0, 0, R.color.design2, 0, 0)
                 .show());
 
         binding.design9.setOnClickListener(v -> new CuteDialog(this)
@@ -95,8 +96,8 @@ public class MainActivity extends AppCompatActivity {
                 .setHeaderIcon(R.drawable.icon_5)
                 .setTitle("Idea!", 0, R.color.design3, 0)
                 .setDesc("Do you want to save this idea?", 0, 0, 0)
-                .setPositiveButtonStyle(0, R.color.design3,0, 0)
-                .setNegativeButtonStyle(0, 0, R.color.design3, 0)
+                .setPositiveButtonStyle(0, R.color.design3, 0, 0, 0)
+                .setNegativeButtonStyle(0, 0, R.color.design3, 0, 0)
                 .show());
 
         binding.design10.setOnClickListener(v -> new CuteDialog(this)
@@ -111,10 +112,8 @@ public class MainActivity extends AppCompatActivity {
                 .setHeaderAnimation(R.raw.anim5)
                 .setTitle("Planning for a tour?", 0, 0, 0)
                 .setDesc("You can plan your tour with us.", 0, 0, 0)
-                .setNegativeButtonStyle(0, 0, Color.parseColor("#111111"), 0)
+                .setNegativeButtonStyle(0, 0, Color.parseColor("#111111"), 0, 0)
                 .show());
-
-
 
 
     }
