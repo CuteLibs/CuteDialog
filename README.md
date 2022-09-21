@@ -71,7 +71,7 @@ Add this to your app level `build.gradle`:
 ```gradle
 dependencies {
 	...
-		implementation 'com.github.CuteLibs:CuteDialog:v-1.0'
+		implementation 'com.github.CuteLibs:CuteDialog:m-beta-0.1'
 
 }
 ```
@@ -85,7 +85,7 @@ dependencies {
                     .setHeaderIcon(R.drawable.icon_1)
                     .setTitle("Wrong Time", 0, 0, 0)
                     .setDesc("You can't do this right now.\nTry Later", 0, 0, 0)
-		    .setPositiveButtonListener(v1 -> {
+		            .setPositiveButtonListener(v1 -> {
                         Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
                     }) 
                     .setNegativeButtonListener(v12 -> {
@@ -108,8 +108,8 @@ dependencies {
                     .setDesc("I don't know what went wrong, but there is a problem.", 0, 0, 0) // Description with Design
                     .setPositiveButtonText("Try Again",  Color.parseColor("#673AB7"), 0) // Positive Button Text with Design
                     .setNegativeButtonText("Cancel",  Color.parseColor("#673AB7"), 0) // Negative Button Text with Design
-                    .setPositiveButtonStyle(0, Color.parseColor("#673AB7"), 0, 0) // Positive Button Style
-                    .setNegativeButtonStyle(0, 0, Color.parseColor("#673AB7"), 0) // Negative Button Style 
+                    .setPositiveButtonStyle(0, Color.parseColor("#673AB7"), 0, 0, 0) // Positive Button Style
+                    .setNegativeButtonStyle(0, 0, Color.parseColor("#673AB7"), 0, 0) // Negative Button Style 
                     .setPositiveButtonListener(v1 -> {
                         Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
                     }) // Positive Button Click Listener
@@ -143,8 +143,8 @@ dependencies {
 | setHeaderAnimation | int animation |  
 | setTitle | String titleText, int textSizeInSP, int textColor, int textStyle |  
 | setDesc | String descText, int textSizeInSP, int textColor, int textStyle |  
-| setPositiveButtonStyle | int radiusOfButton, int bgColorOfButton, int outlineOfButton, int textSizeInSP |  
-| setNegativeButtonStyle | int radiusOfButton, int bgColorOfButton, int outlineOfButton, int textSizeInSP |  
+| setPositiveButtonStyle | int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP |  
+| setNegativeButtonStyle | int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP |  
 | setPositiveButtonText | String positiveText, int textColor, int textStyle |  
 | setNegativeButtonText | String negativeText, int textColor, int textStyle |  
 | setVisibilityOptions | boolean hideCloseIcon, boolean hideTitle, boolean hideDesc, boolean hidePositiveButton, boolean hideNegativeButton |  
