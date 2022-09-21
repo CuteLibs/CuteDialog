@@ -71,7 +71,9 @@ For example:
  ```xml
 
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+	    
         <!-- Customize your theme here. -->
+	    
     </style>
 ```
 Or
@@ -79,7 +81,9 @@ Or
 ```xml
 
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+	    
         <!-- Customize your theme here. -->
+	    
     </style>
 
 ```
