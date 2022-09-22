@@ -182,17 +182,18 @@ dependencies {
 
 #### Enums
 
-| Usage           | Keyword            | Value      | 
-|-----------------|--------------------|------------|
-| Dialog Position | POSITION_CENTER    | 1          |
-| Dialog Position | POSITION_TOP       | 2          |
-| Dialog Position | POSITION_BOTTOM    | 3          |
-| Text Style      | STYLE_BOLD         | 2          |
-| Text Style      | STYLE_ITALIC       | 3          |
-| Text Style      | STYLE_BOLD_ITALIC  | 4          |
-| Header Styler   | HEADER_ICON        | 1          |
-| Header Styler   | HEADER_IMAGE       | 2          |
-| Header Styler   | HEADER_ANIMATION   | 3          |
+| Usage           | Keyword           | Value | 
+|-----------------|-------------------|-------|
+| Dialog Position | POSITION_CENTER   | 1     |
+| Dialog Position | POSITION_TOP      | 2     |
+| Dialog Position | POSITION_BOTTOM   | 3     |
+| Text Style      | STYLE_NORMAL      | 1     |
+| Text Style      | STYLE_BOLD        | 2     |
+| Text Style      | STYLE_ITALIC      | 3     |
+| Text Style      | STYLE_BOLD_ITALIC | 4     |
+| Header Styler   | HEADER_ICON       | 1     |
+| Header Styler   | HEADER_IMAGE      | 2     |
+| Header Styler   | HEADER_ANIMATION  | 3     |
 
 ## More Demo
 
