@@ -160,24 +160,24 @@ dependencies {
 
 | Keyword | Attributes | 
 |---------|--------|
-| setDialogStyle | int bgColor, int cornerRadius, int dialogPosition, int padding |
-| isCancelable | boolean cancelable | 
-| setCloseIconStyle | int iconResID, int sizeInDP, int colorOfIcon | 
-| setHeader | int chooser |  
-| setHeaderIcon | int icon |  
-| setHeaderImage | int image |  
-| setHeaderAnimation | int animation |  
-| setTitle | String titleText, int textSizeInSP, int textColor, int textStyle |  
-| setDesc | String descText, int textSizeInSP, int textColor, int textStyle |  
-| setPositiveButtonStyle | int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP |  
-| setNegativeButtonStyle | int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP |  
-| setPositiveButtonText | String positiveText, int textColor, int textStyle |  
-| setNegativeButtonText | String negativeText, int textColor, int textStyle |  
-| setVisibilityOptions | boolean hideCloseIcon, boolean hideTitle, boolean hideDesc, boolean hidePositiveButton, boolean hideNegativeButton |  
-| setPositiveButtonListener | View.OnClickListener listener |  
-| setNegativeButtonListener | View.OnClickListener listener |  
-| setCloseListener | View.OnClickListener listener |  
-| show | Must Call |  
+| `setDialogStyle` | int `bgColor`, int `cornerRadius`, int `dialogPosition`, int `padding` |
+| `isCancelable` | boolean `cancelable` | 
+| `setCloseIconStyle` | int `iconResID`, int `sizeInDP`, int `colorOfIcon` | 
+| `setHeader` | int `chooser` |  
+| `setHeaderIcon` | int `icon` |  
+| `setHeaderImage` | int `image` |  
+| `setHeaderAnimation` | int `animation` |  
+| `setTitle` | String titleText, int `textSizeInSP`, int `textColor`, int `textStyle` |  
+| `setDesc` | String descText, int `textSizeInSP`, int `textColor`, int `textStyle` |  
+| `setPositiveButtonStyle` | int `radiusOfButton`, int `bgColorOfButton`, int `borderColor`, int `borderWidth`, int `textSizeInSP` |  
+| `setNegativeButtonStyle` | int `radiusOfButton`, int `bgColorOfButton`, int `borderColor`, int `borderWidth`, int `textSizeInSP` |  
+| `setPositiveButtonText` | String `positiveText`, int `textColor`, int `textStyle` |  
+| `setNegativeButtonText` | String `negativeText`, int `textColor`, int `textStyle` |  
+| `setVisibilityOptions` | boolean `hideCloseIcon`, boolean `hideTitle`, boolean `hideDesc`, boolean `hidePositiveButton`, boolean `hideNegativeButton` |  
+| `setPositiveButtonListener` | View.OnClickListener `listener` |  
+| `setNegativeButtonListener` | View.OnClickListener `listener` |  
+| `setCloseListener` | View.OnClickListener `listener` |  
+| `show()`   |  
 
 #### Enums
 
