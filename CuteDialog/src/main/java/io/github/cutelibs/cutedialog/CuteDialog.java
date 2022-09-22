@@ -124,15 +124,16 @@ public class CuteDialog extends Dialog {
 
         // positive button style
         binding.positiveButton.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
-        binding.positiveButtonBorder.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
         binding.positiveButton.setCardBackgroundColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
-        binding.positiveButtonBorder.setCardBackgroundColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
+        binding.positiveButton.setStrokeColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
+        binding.positiveButton.setStrokeWidth(1);
 
         // negative button style
         binding.negativeButton.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
-        binding.negativeButtonBorder.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
         binding.negativeButton.setCardBackgroundColor(WHOLE_BACKGROUND_COLOR_DEFAULT);
-        binding.negativeButtonBorder.setCardBackgroundColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
+        binding.negativeButton.setStrokeColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
+        binding.negativeButton.setStrokeWidth(1);
+
 
         // button text
         binding.positiveText.setTextSize(TypedValue.COMPLEX_UNIT_SP, BUTTON_TEXT_SIZE_DEFAULT);
@@ -349,11 +350,10 @@ public class CuteDialog extends Dialog {
         return this;
     }
 
-    public CuteDialog setPositiveButtonStyle(int radiusOfButton, int bgColorOfButton, int outlineOfButton, int textSizeInSP) {
+    public CuteDialog setPositiveButtonStyle(int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP) {
 
         if (radiusOfButton != 0) {
             binding.positiveButton.setRadius(radiusOfButton * 4);
-            binding.positiveButtonBorder.setRadius(radiusOfButton * 4);
         }
 
         if (bgColorOfButton != 0) {
@@ -364,20 +364,26 @@ public class CuteDialog extends Dialog {
             }
         }
 
-
-        if (outlineOfButton != 0) {
+        if (borderColor != 0) {
             try {
-                binding.positiveButtonBorder.setCardBackgroundColor(ContextCompat.getColor(context, outlineOfButton));
+                binding.positiveButton.setStrokeColor(ContextCompat.getColor(context, borderColor));
             } catch (Resources.NotFoundException e) {
-                binding.positiveButtonBorder.setCardBackgroundColor(outlineOfButton);
+                binding.positiveButton.setStrokeColor(borderColor);
             }
         } else {
-            try {
-                binding.positiveButtonBorder.setCardBackgroundColor(ContextCompat.getColor(context, bgColorOfButton));
-            } catch (Resources.NotFoundException e) {
-                binding.positiveButtonBorder.setCardBackgroundColor(bgColorOfButton);
+            if (bgColorOfButton != 0) {
+                try {
+                    binding.positiveButton.setStrokeColor(ContextCompat.getColor(context, bgColorOfButton));
+                } catch (Resources.NotFoundException e) {
+                    binding.positiveButton.setStrokeColor(bgColorOfButton);
+                }
             }
         }
+
+        if (borderWidth != 0) {
+            binding.positiveButton.setStrokeWidth(borderWidth);
+        }
+
 
         if (textSizeInSP != 0) {
             binding.positiveText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
@@ -387,10 +393,9 @@ public class CuteDialog extends Dialog {
         return this;
     }
 
-    public CuteDialog setNegativeButtonStyle(int radiusOfButton, int bgColorOfButton, int outlineOfButton, int textSizeInSP) {
+    public CuteDialog setNegativeButtonStyle(int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP) {
 
         if (radiusOfButton != 0) {
-            binding.negativeButtonBorder.setRadius(radiusOfButton * 4);
             binding.negativeButton.setRadius(radiusOfButton * 4);
 
         }
@@ -403,12 +408,24 @@ public class CuteDialog extends Dialog {
             }
         }
 
-        if (outlineOfButton != 0) {
+        if (borderColor != 0) {
             try {
-                binding.negativeButtonBorder.setCardBackgroundColor(ContextCompat.getColor(context, outlineOfButton));
+                binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, borderColor));
             } catch (Resources.NotFoundException e) {
-                binding.negativeButtonBorder.setCardBackgroundColor(outlineOfButton);
+                binding.negativeButton.setStrokeColor(borderColor);
             }
+        } else {
+            if (bgColorOfButton != 0) {
+                try {
+                    binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, bgColorOfButton));
+                } catch (Resources.NotFoundException e) {
+                    binding.negativeButton.setStrokeColor(bgColorOfButton);
+                }
+            }
+        }
+
+        if (borderWidth != 0) {
+            binding.negativeButton.setStrokeWidth(borderWidth);
         }
 
 
@@ -494,15 +511,15 @@ public class CuteDialog extends Dialog {
         }
 
         if (hidePositiveButton) {
-            binding.positiveButtonBorder.setVisibility(View.GONE);
+            binding.positiveButton.setVisibility(View.GONE);
         } else {
-            binding.positiveButtonBorder.setVisibility(View.VISIBLE);
+            binding.positiveButton.setVisibility(View.VISIBLE);
         }
 
         if (hideNegativeButton) {
-            binding.negativeButtonBorder.setVisibility(View.GONE);
+            binding.negativeButton.setVisibility(View.GONE);
         } else {
-            binding.negativeButtonBorder.setVisibility(View.VISIBLE);
+            binding.negativeButton.setVisibility(View.VISIBLE);
         }
 
         if (hideNegativeButton || hidePositiveButton) {

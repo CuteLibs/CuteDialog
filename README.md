@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/library_icon.png" height="70" weight="70" alt="GitHub forks"> <img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/Cute_Dialog.png" height="80" alt="Cute Dialog"> </p>
+<p align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/library_icon.png" height="70" alt="GitHub forks"> <img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/Cute_Dialog.png" height="80" alt="Cute Dialog"> </p>
 
 <p align="center"> <a href="https://www.android.com"><img src="https://img.shields.io/badge/platform-Android-yellow.svg" alt="platform"></a>
  <a href="https://android-arsenal.com/api?level=21"><img src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat" alt="API"></a> <a href="https://jitpack.io/#CuteLibs/CuteDialog/"><img src="https://jitpack.io/v/CuteLibs/CuteDialog.svg" alt="JitPack"></a> <a href="https://github.com/CuteLibs/CuteDialog/blob/master/LICENSE"><img src="https://img.shields.io/github/license/CuteLibs/CuteDialog" alt="GitHub license"></a> </p>
@@ -63,6 +63,32 @@ dependencyResolutionManagement {
 }
 ```
 
+## Theme
+For using <b>CuteDialog</b> in your project, you must use <b>Material Theme</B> in your project. You can use <b>CuteDialog</b> in both <b>Material</b>  <b>Light</b> and <b>Dark</b> theme.
+
+For example:
+    
+ ```xml
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+	    
+        <!-- Customize your theme here. -->
+	    
+    </style>
+```
+Or
+
+```xml
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+	    
+        <!-- Customize your theme here. -->
+	    
+    </style>
+
+```
+
+
 ## Dependencies
 Add this to your app level `build.gradle`:
 
@@ -71,7 +97,7 @@ Add this to your app level `build.gradle`:
 ```gradle
 dependencies {
 	...
-		implementation 'com.github.CuteLibs:CuteDialog:v-1.0'
+		implementation 'com.github.CuteLibs:CuteDialog:m-beta-0.1'
 
 }
 ```
@@ -108,8 +134,8 @@ dependencies {
                     .setDesc("I don't know what went wrong, but there is a problem.", 0, 0, 0) // Description with Design
                     .setPositiveButtonText("Try Again",  Color.parseColor("#673AB7"), 0) // Positive Button Text with Design
                     .setNegativeButtonText("Cancel",  Color.parseColor("#673AB7"), 0) // Negative Button Text with Design
-                    .setPositiveButtonStyle(0, Color.parseColor("#673AB7"), 0, 0) // Positive Button Style
-                    .setNegativeButtonStyle(0, 0, Color.parseColor("#673AB7"), 0) // Negative Button Style 
+                    .setPositiveButtonStyle(0, Color.parseColor("#673AB7"), 0, 0, 0) // Positive Button Style
+                    .setNegativeButtonStyle(0, 0, Color.parseColor("#673AB7"), 0, 0) // Negative Button Style 
                     .setPositiveButtonListener(v1 -> {
                         Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
                     }) // Positive Button Click Listener
@@ -134,24 +160,24 @@ dependencies {
 
 | Keyword | Attributes | 
 |---------|--------|
-| setDialogStyle | int bgColor, int cornerRadius, int dialogPosition, int padding |
-| isCancelable | boolean cancelable | 
-| setCloseIconStyle | int iconResID, int sizeInDP, int colorOfIcon | 
-| setHeader | int chooser |  
-| setHeaderIcon | int icon |  
-| setHeaderImage | int image |  
-| setHeaderAnimation | int animation |  
-| setTitle | String titleText, int textSizeInSP, int textColor, int textStyle |  
-| setDesc | String descText, int textSizeInSP, int textColor, int textStyle |  
-| setPositiveButtonStyle | int radiusOfButton, int bgColorOfButton, int outlineOfButton, int textSizeInSP |  
-| setNegativeButtonStyle | int radiusOfButton, int bgColorOfButton, int outlineOfButton, int textSizeInSP |  
-| setPositiveButtonText | String positiveText, int textColor, int textStyle |  
-| setNegativeButtonText | String negativeText, int textColor, int textStyle |  
-| setVisibilityOptions | boolean hideCloseIcon, boolean hideTitle, boolean hideDesc, boolean hidePositiveButton, boolean hideNegativeButton |  
-| setPositiveButtonListener | View.OnClickListener listener |  
-| setNegativeButtonListener | View.OnClickListener listener |  
-| setCloseListener | View.OnClickListener listener |  
-| show | Must Call |  
+| `setDialogStyle` | int `bgColor`, int `cornerRadius`, int `dialogPosition`, int `padding` |
+| `isCancelable` | boolean `cancelable` | 
+| `setCloseIconStyle` | int `iconResID`, int `sizeInDP`, int `colorOfIcon` | 
+| `setHeader` | int `chooser` |  
+| `setHeaderIcon` | int `icon` |  
+| `setHeaderImage` | int `image` |  
+| `setHeaderAnimation` | int `animation` |  
+| `setTitle` | String titleText, int `textSizeInSP`, int `textColor`, int `textStyle` |  
+| `setDesc` | String descText, int `textSizeInSP`, int `textColor`, int `textStyle` |  
+| `setPositiveButtonStyle` | int `radiusOfButton`, int `bgColorOfButton`, int `borderColor`, int `borderWidth`, int `textSizeInSP` |  
+| `setNegativeButtonStyle` | int `radiusOfButton`, int `bgColorOfButton`, int `borderColor`, int `borderWidth`, int `textSizeInSP` |  
+| `setPositiveButtonText` | String `positiveText`, int `textColor`, int `textStyle` |  
+| `setNegativeButtonText` | String `negativeText`, int `textColor`, int `textStyle` |  
+| `setVisibilityOptions` | boolean `hideCloseIcon`, boolean `hideTitle`, boolean `hideDesc`, boolean `hidePositiveButton`, boolean `hideNegativeButton` |  
+| `setPositiveButtonListener` | View.OnClickListener `listener` |  
+| `setNegativeButtonListener` | View.OnClickListener `listener` |  
+| `setCloseListener` | View.OnClickListener `listener` |  
+| `show()`   |  
 
 #### Enums
 
