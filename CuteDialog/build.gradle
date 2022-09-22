@@ -3,8 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'io.github.cutelibs'
-version = '1.0'
+group = 'com.github.cutelibs'
+version = '1.1'
 
 
 android {
@@ -62,9 +62,9 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'io.github.cutelibs'
+                groupId = 'com.github.cutelibs'
                 artifactId = 'CuteDialog'
-                version = '1.0'
+                version = '1.1'
             }
         }
     }

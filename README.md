@@ -97,7 +97,8 @@ Add this to your app level `build.gradle`:
 ```gradle
 dependencies {
 	...
-		implementation 'com.github.CuteLibs:CuteDialog:m-beta-0.1'
+	       implementation 'com.github.CuteLibs:CuteDialog:v-1.1'
+
 
 }
 ```
@@ -181,18 +182,17 @@ dependencies {
 
 #### Enums
 
-| Keyword | Value | 
-|---------|--------|
-| POSITION_CENTER | 1 |
-| POSITION_TOP | 2 |
-| POSITION_BOTTOM | 3 |
-| STYLE_NORMAL | 1 |
-| STYLE_BOLD | 2 |
-| STYLE_ITALIC | 3 |
-| STYLE_BOLD_ITALIC | 4 |
-| HEADER_ICON | 1 |
-| HEADER_IMAGE | 2 |
-| HEADER_ANIMATION | 3 |
+| Usage           | Keyword            | Value      | 
+|-----------------|--------------------|------------|
+| Dialog Position | POSITION_CENTER    | 1          |
+| Dialog Position | POSITION_TOP       | 2          |
+| Dialog Position | POSITION_BOTTOM    | 3          |
+| Text Style      | STYLE_BOLD         | 2          |
+| Text Style      | STYLE_ITALIC       | 3          |
+| Text Style      | STYLE_BOLD_ITALIC  | 4          |
+| Header Styler   | HEADER_ICON        | 1          |
+| Header Styler   | HEADER_IMAGE       | 2          |
+| Header Styler   | HEADER_ANIMATION   | 3          |
 
 ## More Demo
 
