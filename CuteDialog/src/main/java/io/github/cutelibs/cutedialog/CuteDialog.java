@@ -66,12 +66,10 @@ public class CuteDialog extends Dialog {
         super(context);
         this.context = context;
         binding = CuteDialogMainLayoutBinding.inflate(LayoutInflater.from(context));
-
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         getWindow().setLayout(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
         setContentView(binding.getRoot());
-
         inits();
 
     }
@@ -82,7 +80,6 @@ public class CuteDialog extends Dialog {
         setCancelable(true);
         binding.wholeCard.setCardBackgroundColor(WHOLE_BACKGROUND_COLOR_DEFAULT);
         binding.wholeCard.setRadius(WHOLE_CORNER_RADIUS_DEFAULT * 4);
-
 
         // padding
         binding.padding1.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, WHOLE_PADDING_DEFAULT * 4));
@@ -107,20 +104,17 @@ public class CuteDialog extends Dialog {
         binding.mainImage.setVisibility(View.GONE);
         binding.mainAnimation.setVisibility(View.GONE);
 
-
         // title Text
         binding.titleText.setText(TITLE_TEXT_DEFAULT);
         binding.titleText.setTextSize(TypedValue.COMPLEX_UNIT_SP, TITLE_TEXT_SIZE_DEFAULT);
         binding.titleText.setTextColor(TITLE_TEXT_COLOR_DEFAULT);
         binding.titleText.setTypeface(binding.titleText.getTypeface(), Typeface.BOLD);
 
-
         // description Text
         binding.descText.setText(DESC_TEXT_DEFAULT);
         binding.descText.setTextSize(TypedValue.COMPLEX_UNIT_SP, DESC_TEXT_SIZE_DEFAULT);
         binding.descText.setTextColor(DESC_TEXT_COLOR_DEFAULT);
         binding.descText.setTypeface(binding.descText.getTypeface(), Typeface.NORMAL);
-
 
         // positive button style
         binding.positiveButton.setRadius(BUTTON_CORNER_RADIUS_DEFAULT * 4);
@@ -133,7 +127,6 @@ public class CuteDialog extends Dialog {
         binding.negativeButton.setCardBackgroundColor(WHOLE_BACKGROUND_COLOR_DEFAULT);
         binding.negativeButton.setStrokeColor(BUTTON_BACKGROUND_COLOR_DEFAULT);
         binding.negativeButton.setStrokeWidth(1);
-
 
         // button text
         binding.positiveText.setTextSize(TypedValue.COMPLEX_UNIT_SP, BUTTON_TEXT_SIZE_DEFAULT);
@@ -176,7 +169,6 @@ public class CuteDialog extends Dialog {
         if (cornerRadius != 0) {
             binding.wholeCard.setRadius(cornerRadius * 4);
         }
-
 
         // wholeCard padding
         if (padding != 0) {
@@ -283,7 +275,6 @@ public class CuteDialog extends Dialog {
     }
 
     public CuteDialog setTitle(String titleText, int textSizeInSP, int textColor, int textStyle) {
-
         binding.titleText.setText(titleText);
 
         if (textSizeInSP != 0) {
@@ -311,7 +302,6 @@ public class CuteDialog extends Dialog {
         } else {
             binding.titleText.setTypeface(binding.titleText.getTypeface(), Typeface.NORMAL);
         }
-
 
         return this;
     }
@@ -345,7 +335,6 @@ public class CuteDialog extends Dialog {
         } else {
             binding.descText.setTypeface(binding.descText.getTypeface(), Typeface.NORMAL);
         }
-
 
         return this;
     }
@@ -384,11 +373,9 @@ public class CuteDialog extends Dialog {
             binding.positiveButton.setStrokeWidth(borderWidth);
         }
 
-
         if (textSizeInSP != 0) {
             binding.positiveText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
         }
-
 
         return this;
     }
