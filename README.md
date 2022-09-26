@@ -156,9 +156,9 @@ dependencies {
 #### Notes
 
 * `setHeader` - it's a custom field to choose which type of header you want to use. Details at [Attributes/Enums](#enums)
-* `setHeaderIcon` -  used to choose a icon, basically drawable/mipmap. Example, R.drawable.icon / R.mipmap.ic_launcher
-* `setHeaderImage` -  used to choose a image, basically drawable. Example, R.drawable.image
-* `setHeaderAnimation` - used to choose a animation from 'res/raw' folder. Example, R.raw.anim. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
+* `setHeaderIcon` -  used to choose a icon, basically drawable/mipmap. Example, `R.drawable.icon` / `R.mipmap.ic_launcher`
+* `setHeaderImage` -  used to choose a image, basically drawable. Example, `R.drawable.image`
+* `setHeaderAnimation` - used to choose a animation from 'res/raw' folder. Example, `R.raw.anim`. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
 
 ![customizations](https://github.com/CuteLibs/CuteDialog/blob/master/files/details.jpg)
 
@@ -166,7 +166,7 @@ dependencies {
 
 #### Attributes
 
-| Keyword | Attributes | 
+| Keyword | Values | 
 |---------|--------|
 | `setDialogStyle` | int `bgColor`, int `cornerRadius`, int `dialogPosition`, int `padding` |
 | `isCancelable` | boolean `cancelable` | 
@@ -220,6 +220,8 @@ If this project helps you a little bit, then give a to Star ⭐ the Repo.
 ## Credits
 
 Created with ❤️ by <a href="https://github.com/CuteLibs"> CuteLibs </a> & <a href="https://github.com/ahmmedrejowan"> K M Rejowan Ahmmed </a>
+
+* Animation - [Lottie for Android](https://github.com/airbnb/lottie-android) library
 
 ## License
 * [Apache Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
