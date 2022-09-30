@@ -146,7 +146,7 @@ dependencies {
                     .setCloseListener(v13 -> {
                         Toast.makeText(this, "Close Icon Clicked", Toast.LENGTH_SHORT).show();
                     }) // Close Icon click Listener
-                    .show();
+                    .show();  // calls to show the dialog
 
 ```
 
