@@ -34,7 +34,6 @@ jobs:
           name: lint.html
           path: CuteDialog/build/reports/lint-results-debug.html
 
-
   unit-test:
     needs: [ lint ]
     runs-on: ubuntu-latest
