@@ -77,7 +77,6 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-
       - name: Run Espresso Test
         uses: reactivecircus/android-emulator-runner@v2
         with:
