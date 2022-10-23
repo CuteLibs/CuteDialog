@@ -110,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding.design11.setOnClickListener(v -> {
 
-            new CuteDialog.withIcon(this)
-                    .setHeading()
 
         });
 

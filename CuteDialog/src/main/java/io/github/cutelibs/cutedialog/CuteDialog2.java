@@ -192,6 +192,7 @@ public class CuteDialog2 extends Dialog {
         return this;
     }
 
+    //
     public CuteDialog2 setCloseIconStyle(int iconResID, int sizeInDP, int colorOfIcon) {
 
         // closeIcon
@@ -274,6 +275,7 @@ public class CuteDialog2 extends Dialog {
         return this;
     }
 
+    //
     public CuteDialog2 setTitle(String titleText, int textSizeInSP, int textColor, int textStyle) {
         binding.titleText.setText(titleText);
 
@@ -306,6 +308,7 @@ public class CuteDialog2 extends Dialog {
         return this;
     }
 
+    //
     public CuteDialog2 setDesc(String descText, int textSizeInSP, int textColor, int textStyle) {
 
         binding.descText.setText(descText);
@@ -339,6 +342,7 @@ public class CuteDialog2 extends Dialog {
         return this;
     }
 
+    //
     public CuteDialog2 setPositiveButtonStyle(int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP) {
 
         if (radiusOfButton != 0) {
@@ -380,6 +384,7 @@ public class CuteDialog2 extends Dialog {
         return this;
     }
 
+    //
     public CuteDialog2 setNegativeButtonStyle(int radiusOfButton, int bgColorOfButton, int borderColor, int borderWidth, int textSizeInSP) {
 
         if (radiusOfButton != 0) {
@@ -424,6 +429,7 @@ public class CuteDialog2 extends Dialog {
         return this;
     }
 
+    //
     public CuteDialog2 setPositiveButtonText(String positiveText, int textColor, int textStyle) {
         binding.positiveText.setText(positiveText);
         if (textColor != 0) {
@@ -450,6 +456,7 @@ public class CuteDialog2 extends Dialog {
         return this;
     }
 
+    //
     public CuteDialog2 setNegativeButtonText(String negativeText, int textColor, int textStyle) {
 
         binding.negativeText.setText(negativeText);
@@ -477,6 +484,7 @@ public class CuteDialog2 extends Dialog {
         return this;
     }
 
+    //
     public CuteDialog2 setVisibilityOptions(boolean hideCloseIcon, boolean hideTitle, boolean hideDesc, boolean hidePositiveButton, boolean hideNegativeButton) {
 
         if (hideCloseIcon) {
@@ -518,6 +526,7 @@ public class CuteDialog2 extends Dialog {
         return this;
 
     }
+
 
     public CuteDialog2 setPositiveButtonListener(View.OnClickListener listener) {
         binding.positiveButton.setOnClickListener(v -> {

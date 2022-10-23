@@ -14,7 +14,6 @@ import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 
 import io.github.cutelibs.cutedialog.databinding.CuteDialogMainLayoutBinding;
@@ -41,11 +40,11 @@ public class CuteDialog {
     private static final String TITLE_TEXT_DEFAULT = "";
     private static final String DESC_TEXT_DEFAULT = "";
 
-    /**
-     *
-     */
+
     public static class withIcon extends Dialog {
+
         Context context;
+
         CuteDialogMainLayoutBinding binding;
 
         public withIcon(Context context) {
@@ -126,29 +125,39 @@ public class CuteDialog {
 
         }
 
+
+        // set Icon
+        public withIcon setIcon(int icon) {
+            try {
+                binding.mainIcon.setImageResource(icon);
+            } catch (Resources.NotFoundException e) {
+                e.printStackTrace();
+            }
+            return this;
+        }
+
+
+        // set Cancelable
         public withIcon isCancelable(boolean cancelable) {
             setCancelable(cancelable);
             return this;
         }
 
 
-        /**
-         * Sets heading.
-         *
-         * @param titleText    the title text
-         * @param textSizeInSP the text size in sp
-         * @param textColor    the text color
-         * @param textStyle    the text style
-         * @return the heading
-         */
-        public withIcon setHeading(String titleText, int textSizeInSP, int textColor, int textStyle) {
-            binding.titleText.setText(titleText);
+        // Set Title Text and Style
+        public withIcon setTitle(String string) {
+            binding.titleText.setText(string);
+            return this;
+        }
 
+        public withIcon setTitleTextSize(int textSizeInSP) {
             if (textSizeInSP != 0) {
                 binding.titleText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
             }
+            return this;
+        }
 
-            // title Text color
+        public withIcon setTitleTextColor(int textColor) {
             if (textColor != 0) {
                 try {
                     binding.titleText.setTextColor(ContextCompat.getColor(context, textColor));
@@ -156,8 +165,10 @@ public class CuteDialog {
                     binding.titleText.setTextColor(textColor);
                 }
             }
+            return this;
+        }
 
-            // title text style
+        public withIcon setTitleTextStyle(int textStyle) {
             if (textStyle == 1) {
                 binding.titleText.setTypeface(binding.titleText.getTypeface(), Typeface.NORMAL);
             } else if (textStyle == 2) {
@@ -169,19 +180,24 @@ public class CuteDialog {
             } else {
                 binding.titleText.setTypeface(binding.titleText.getTypeface(), Typeface.NORMAL);
             }
-
             return this;
         }
 
-        public withIcon setDescription(String descText, int textSizeInSP, int textColor, int textStyle) {
 
+        // Set Description Text and Style
+        public withIcon setDescription(String descText) {
             binding.descText.setText(descText);
+            return this;
+        }
 
+        public withIcon setDescriptionTextSize(int textSizeInSP) {
             if (textSizeInSP != 0) {
                 binding.descText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
             }
+            return this;
+        }
 
-            // desc Text color
+        public withIcon setDescriptionTextColor(int textColor) {
             if (textColor != 0) {
                 try {
                     binding.descText.setTextColor(ContextCompat.getColor(context, textColor));
@@ -189,7 +205,10 @@ public class CuteDialog {
                     binding.descText.setTextColor(textColor);
                 }
             }
+            return this;
+        }
 
+        public withIcon setDescriptionTextStyle(int textStyle) {
             // desc text style
             if (textStyle == 1) {
                 binding.descText.setTypeface(binding.descText.getTypeface(), Typeface.NORMAL);
@@ -202,7 +221,271 @@ public class CuteDialog {
             } else {
                 binding.descText.setTypeface(binding.descText.getTypeface(), Typeface.NORMAL);
             }
+            return this;
+        }
 
+
+        // Set Positive Text and Style
+        public withIcon setPositiveButtonText(String string, View.OnClickListener listener) {
+            binding.positiveText.setText(string);
+            binding.positiveButton.setOnClickListener(v -> {
+                listener.onClick(v);
+                dismiss();
+            });
+            return this;
+        }
+
+        public withIcon setPositiveButtonTextColor(int textColor) {
+            if (textColor != 0) {
+                try {
+                    binding.positiveText.setTextColor(ContextCompat.getColor(context, textColor));
+                } catch (Resources.NotFoundException e) {
+                    binding.positiveText.setTextColor(textColor);
+                }
+            }
+            return this;
+        }
+
+        public withIcon setPositiveButtonTextStyle(int textStyle) {
+            if (textStyle == 1) {
+                binding.positiveText.setTypeface(binding.positiveText.getTypeface(), Typeface.NORMAL);
+            } else if (textStyle == 2) {
+                binding.positiveText.setTypeface(binding.positiveText.getTypeface(), Typeface.BOLD);
+            } else if (textStyle == 3) {
+                binding.positiveText.setTypeface(binding.positiveText.getTypeface(), Typeface.ITALIC);
+            } else if (textStyle == 4) {
+                binding.positiveText.setTypeface(binding.positiveText.getTypeface(), Typeface.BOLD_ITALIC);
+            } else {
+                binding.positiveText.setTypeface(binding.positiveText.getTypeface(), Typeface.NORMAL);
+            }
+
+            return this;
+        }
+
+        public withIcon setPositiveButtonTextSize(int textSizeInSP) {
+            if (textSizeInSP != 0) {
+                binding.positiveText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
+            }
+            return this;
+        }
+
+
+        // Set Positive Button Style
+        public withIcon setPositiveButtonColor(int bgColorOfButton) {
+            if (bgColorOfButton != 0) {
+                try {
+                    binding.positiveButton.setCardBackgroundColor(ContextCompat.getColor(context, bgColorOfButton));
+                } catch (Resources.NotFoundException e) {
+                    binding.positiveButton.setCardBackgroundColor(bgColorOfButton);
+                }
+            }
+            return this;
+        }
+
+        public withIcon setPositiveButtonRadius(int radiusOfButton) {
+            if (radiusOfButton != 0) {
+                binding.positiveButton.setRadius(radiusOfButton * 4);
+            }
+            return this;
+        }
+
+        public withIcon setPositiveButtonBorderColor(int borderColor) {
+            if (borderColor != 0) {
+                try {
+                    binding.positiveButton.setStrokeColor(ContextCompat.getColor(context, borderColor));
+                } catch (Resources.NotFoundException e) {
+                    binding.positiveButton.setStrokeColor(borderColor);
+                }
+            } else {
+                binding.positiveButton.setStrokeColor(Color.TRANSPARENT);
+            }
+            return this;
+        }
+
+        public withIcon setPositiveButtonBorderWidth(int borderWidth) {
+            if (borderWidth != 0) {
+                binding.positiveButton.setStrokeWidth(borderWidth);
+            }
+            return this;
+        }
+
+
+        // Set Negative Text and Style
+        public withIcon setNegativeButtonText(String string, View.OnClickListener listener) {
+            binding.negativeText.setText(string);
+            binding.negativeButton.setOnClickListener(v -> {
+                listener.onClick(v);
+                dismiss();
+            });
+            return this;
+        }
+
+        public withIcon setNegativeButtonTextColor(int textColor) {
+            if (textColor != 0) {
+                try {
+                    binding.negativeText.setTextColor(ContextCompat.getColor(context, textColor));
+                } catch (Resources.NotFoundException e) {
+                    binding.negativeText.setTextColor(textColor);
+                }
+            }
+            return this;
+        }
+
+        public withIcon setNegativeButtonTextStyle(int textStyle) {
+            if (textStyle == 1) {
+                binding.negativeText.setTypeface(binding.negativeText.getTypeface(), Typeface.NORMAL);
+            } else if (textStyle == 2) {
+                binding.negativeText.setTypeface(binding.negativeText.getTypeface(), Typeface.BOLD);
+            } else if (textStyle == 3) {
+                binding.negativeText.setTypeface(binding.negativeText.getTypeface(), Typeface.ITALIC);
+            } else if (textStyle == 4) {
+                binding.negativeText.setTypeface(binding.negativeText.getTypeface(), Typeface.BOLD_ITALIC);
+            } else {
+                binding.negativeText.setTypeface(binding.negativeText.getTypeface(), Typeface.NORMAL);
+            }
+            return this;
+        }
+
+        public withIcon setNegativeButtonTextSize(int textSizeInSP) {
+            if (textSizeInSP != 0) {
+                binding.negativeText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
+            }
+            return this;
+        }
+
+
+        // Set Negative Button Style
+        public withIcon setNegativeButtonColor(int bgColorOfButton) {
+            if (bgColorOfButton != 0) {
+                try {
+                    binding.negativeButton.setCardBackgroundColor(ContextCompat.getColor(context, bgColorOfButton));
+                } catch (Resources.NotFoundException e) {
+                    binding.negativeButton.setCardBackgroundColor(bgColorOfButton);
+                }
+            }
+            return this;
+        }
+
+        public withIcon setNegativeButtonRadius(int radiusOfButton) {
+            if (radiusOfButton != 0) {
+                binding.negativeButton.setRadius(radiusOfButton * 4);
+
+            }
+            return this;
+        }
+
+        public withIcon setNegativeButtonBorderColor(int borderColor) {
+            if (borderColor != 0) {
+                try {
+                    binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, borderColor));
+                } catch (Resources.NotFoundException e) {
+                    binding.negativeButton.setStrokeColor(borderColor);
+                }
+            } else {
+                binding.negativeButton.setStrokeColor(Color.TRANSPARENT);
+            }
+            return this;
+        }
+
+        public withIcon setNegativeButtonBorderWidth(int borderWidth) {
+            if (borderWidth != 0) {
+                binding.negativeButton.setStrokeWidth(borderWidth);
+            }
+            return this;
+        }
+
+
+        // hide options
+        public withIcon hideCloseIcon(boolean bool) {
+            if (bool) {
+                binding.closeIcon.setVisibility(View.GONE);
+            } else {
+                binding.closeIcon.setVisibility(View.VISIBLE);
+            }
+            return this;
+
+        }
+
+        public withIcon hideTitle(boolean bool) {
+            if (bool) {
+                binding.titleText.setVisibility(View.GONE);
+            } else {
+                binding.titleText.setVisibility(View.VISIBLE);
+            }
+            return this;
+        }
+
+        public withIcon hideDescription(boolean bool) {
+            if (bool) {
+                binding.descText.setVisibility(View.GONE);
+            } else {
+                binding.descText.setVisibility(View.VISIBLE);
+            }
+            return this;
+        }
+
+        public withIcon hidePositiveButton(boolean bool) {
+            if (bool) {
+                binding.positiveButton.setVisibility(View.GONE);
+                binding.padding4.setVisibility(View.GONE);
+            } else {
+                binding.positiveButton.setVisibility(View.VISIBLE);
+            }
+            return this;
+        }
+
+        public withIcon hideNegativeButton(boolean bool) {
+
+            if (bool) {
+                binding.negativeButton.setVisibility(View.GONE);
+                binding.padding4.setVisibility(View.GONE);
+            } else {
+                binding.negativeButton.setVisibility(View.VISIBLE);
+            }
+
+
+            return this;
+
+        }
+
+
+        // close icon
+        public withIcon setCloseIconListener(View.OnClickListener listener) {
+            binding.closeIcon.setOnClickListener(v -> {
+                listener.onClick(v);
+                dismiss();
+            });
+            return this;
+        }
+
+        public withIcon setCloseIcon(int iconResID) {
+            if (iconResID != 0) {
+                try {
+                    binding.closeIcon.setImageResource(iconResID);
+                } catch (Resources.NotFoundException e) {
+                    binding.closeIcon.setImageResource(R.drawable.cute_dialog_close_icon);
+                }
+            }
+            return this;
+        }
+
+        public withIcon setCloseIconSize(int sizeInDP) {
+            if (sizeInDP != 0) {
+                binding.closeIcon.getLayoutParams().height = sizeInDP * 2;
+                binding.closeIcon.getLayoutParams().width = sizeInDP * 2;
+                binding.closeIcon.requestLayout();
+            }
+            return this;
+        }
+
+        public withIcon setCloseIconColor(int colorOfIcon) {
+            if (colorOfIcon != 0) {
+                try {
+                    binding.closeIcon.setColorFilter(ContextCompat.getColor(context, colorOfIcon));
+                } catch (Resources.NotFoundException e) {
+                    binding.closeIcon.setColorFilter(colorOfIcon);
+                }
+            }
             return this;
         }
 
