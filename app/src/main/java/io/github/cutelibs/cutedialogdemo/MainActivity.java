@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                         .show());
 
         binding.design3.setOnClickListener(v ->
-                new CuteDialog.withAnim(this)
+                new CuteDialog.withAnimation(this)
                         .setAnimation(R.raw.anim1)
                         .setTitle("Set Reminder")
                         .setDescription("Do you want me to remind you? ")
