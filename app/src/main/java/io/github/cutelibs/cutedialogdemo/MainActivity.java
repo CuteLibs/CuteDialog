@@ -2,6 +2,7 @@ package io.github.cutelibs.cutedialogdemo;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,25 +20,27 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.design1.setOnClickListener(v -> new CuteDialog(this)
-                .setHeader(CuteDialog.HEADER_ICON)
-                .setHeaderIcon(R.drawable.icon_1)
-                .setTitle("Wrong Time", 0, 0, 0)
-                .setDesc("You can't do this right now.\nTry Later", 0, 0, 0)
-                .show());
+        binding.design1.setOnClickListener(v ->
+                new CuteDialog.withIcon(this)
+                        .setIcon(R.drawable.icon_1)
+                        .setTitle("Wrong Time")
+                        .setDescription("You can't do this at this time")
+                        .setPositiveButtonText("Okay", v2 -> {
+                            Toast.makeText(this, "Test", Toast.LENGTH_SHORT).show();
+                        })
+                        .show()
+        );
 
-        binding.design2.setOnClickListener(v -> new CuteDialog(this)
-                .setHeader(CuteDialog.HEADER_IMAGE)
+        binding.design2.setOnClickListener(v -> new CuteDialog.withImage(this)
                 .setHeaderImage(R.drawable.image_1)
-                .setTitle("Take a break", 0, 0, 0)
-                .setDesc("Isn't it a great time to go for a walk?", 0, 0, 0)
+                .setTitle("Take a break")
+                .setDescription("Isn't it a great time to go for a walk?")
                 .show());
 
-        binding.design3.setOnClickListener(v -> new CuteDialog(this)
-                .setHeader(CuteDialog.HEADER_ANIMATION)
-                .setHeaderAnimation(R.raw.anim1)
-                .setTitle("Set Reminder", 0, 0, 0)
-                .setDesc("Do you want me to remind you? ", 0, 0, 0)
+        binding.design3.setOnClickListener(v -> new CuteDialog.withAnim(this)
+                .setAnimation(R.raw.anim1)
+                .setTitle("Set Reminder")
+                .setDescription("Do you want me to remind you? ")
                 .show());
 
         binding.design4.setOnClickListener(v -> new CuteDialog(this)
@@ -107,13 +110,10 @@ public class MainActivity extends AppCompatActivity {
                 .setVisibilityOptions(false, false, true, false, false)
                 .show());
 
-        binding.design11.setOnClickListener(v -> new CuteDialog(this)
-                .setHeader(CuteDialog.HEADER_ANIMATION)
-                .setHeaderAnimation(R.raw.anim5)
-                .setTitle("Planning for a tour?", 0, 0, 0)
-                .setDesc("You can plan your tour with us.", 0, 0, 0)
-                .setNegativeButtonStyle(0, 0, Color.parseColor("#111111"), 0, 0)
-                .show());
+        binding.design11.setOnClickListener(v -> {
+
+
+        });
 
 
     }
