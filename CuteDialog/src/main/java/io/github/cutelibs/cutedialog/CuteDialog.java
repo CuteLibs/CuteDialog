@@ -1573,7 +1573,7 @@ public class CuteDialog extends Dialog {
 
     }
 
-    public static class withAnim extends Dialog {
+    public static class withAnimation extends Dialog {
 
         Context context;
 
@@ -1583,7 +1583,7 @@ public class CuteDialog extends Dialog {
         boolean isPositiveColorChanged = false;
         boolean isNegativeColorChanged = false;
 
-        public withAnim(Context context) {
+        public withAnimation(Context context) {
             super(context);
             this.context = context;
             binding = CuteDialogMainLayoutBinding.inflate(LayoutInflater.from(context));
@@ -1661,7 +1661,7 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim setDialogBackgroundColor(int bgColor) {
+        public withAnimation setDialogBackgroundColor(int bgColor) {
             if (bgColor != 0) {
                 try {
                     binding.wholeCard.setCardBackgroundColor(ContextCompat.getColor(context, bgColor));
@@ -1672,14 +1672,14 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setDialogRadius(int cornerRadius) {
+        public withAnimation setDialogRadius(int cornerRadius) {
             if (cornerRadius != 0) {
                 binding.wholeCard.setRadius(cornerRadius * 4);
             }
             return this;
         }
 
-        public withAnim setDialogPosition(int dialogPosition) {
+        public withAnimation setDialogPosition(int dialogPosition) {
             if (dialogPosition == 1) {
                 getWindow().setGravity(Gravity.CENTER);
             } else if (dialogPosition == 2) {
@@ -1692,7 +1692,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setPadding(int padding) {
+        public withAnimation setPadding(int padding) {
             if (padding != 0) {
                 binding.padding1.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, padding * 4));
                 binding.padding2.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, padding * 2));
@@ -1705,7 +1705,7 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim setAnimation(int animation) {
+        public withAnimation setAnimation(int animation) {
             try {
                 binding.mainAnimation.setAnimation(animation);
             } catch (Resources.NotFoundException e) {
@@ -1716,25 +1716,25 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim isCancelable(boolean cancelable) {
+        public withAnimation isCancelable(boolean cancelable) {
             setCancelable(cancelable);
             return this;
         }
 
 
-        public withAnim setTitle(String string) {
+        public withAnimation setTitle(String string) {
             binding.titleText.setText(string);
             return this;
         }
 
-        public withAnim setTitleTextSize(int textSizeInSP) {
+        public withAnimation setTitleTextSize(int textSizeInSP) {
             if (textSizeInSP != 0) {
                 binding.titleText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
             }
             return this;
         }
 
-        public withAnim setTitleTextColor(int textColor) {
+        public withAnimation setTitleTextColor(int textColor) {
             if (textColor != 0) {
                 try {
                     binding.titleText.setTextColor(ContextCompat.getColor(context, textColor));
@@ -1746,7 +1746,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setTitleTextStyle(int textStyle) {
+        public withAnimation setTitleTextStyle(int textStyle) {
             if (textStyle == 1) {
                 binding.titleText.setTypeface(binding.titleText.getTypeface(), Typeface.NORMAL);
             } else if (textStyle == 2) {
@@ -1762,19 +1762,19 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim setDescription(String descText) {
+        public withAnimation setDescription(String descText) {
             binding.descText.setText(descText);
             return this;
         }
 
-        public withAnim setDescriptionTextSize(int textSizeInSP) {
+        public withAnimation setDescriptionTextSize(int textSizeInSP) {
             if (textSizeInSP != 0) {
                 binding.descText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
             }
             return this;
         }
 
-        public withAnim setDescriptionTextColor(int textColor) {
+        public withAnimation setDescriptionTextColor(int textColor) {
             if (textColor != 0) {
                 try {
                     binding.descText.setTextColor(ContextCompat.getColor(context, textColor));
@@ -1785,7 +1785,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setDescriptionTextStyle(int textStyle) {
+        public withAnimation setDescriptionTextStyle(int textStyle) {
 
             if (textStyle == 1) {
                 binding.descText.setTypeface(binding.descText.getTypeface(), Typeface.NORMAL);
@@ -1802,7 +1802,7 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim setPositiveButtonText(String string, View.OnClickListener listener) {
+        public withAnimation setPositiveButtonText(String string, View.OnClickListener listener) {
             binding.positiveText.setText(string);
             binding.positiveButton.setOnClickListener(v -> {
                 listener.onClick(v);
@@ -1811,7 +1811,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setPositiveButtonTextColor(int textColor) {
+        public withAnimation setPositiveButtonTextColor(int textColor) {
             if (textColor != 0) {
                 try {
                     binding.positiveText.setTextColor(ContextCompat.getColor(context, textColor));
@@ -1822,7 +1822,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setPositiveButtonTextStyle(int textStyle) {
+        public withAnimation setPositiveButtonTextStyle(int textStyle) {
             if (textStyle == 1) {
                 binding.positiveText.setTypeface(binding.positiveText.getTypeface(), Typeface.NORMAL);
             } else if (textStyle == 2) {
@@ -1838,7 +1838,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setPositiveButtonTextSize(int textSizeInSP) {
+        public withAnimation setPositiveButtonTextSize(int textSizeInSP) {
             if (textSizeInSP != 0) {
                 binding.positiveText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
             }
@@ -1846,7 +1846,7 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim setPositiveButtonColor(int bgColorOfButton) {
+        public withAnimation setPositiveButtonColor(int bgColorOfButton) {
             if (bgColorOfButton != 0) {
                 try {
                     binding.positiveButton.setCardBackgroundColor(ContextCompat.getColor(context, bgColorOfButton));
@@ -1858,14 +1858,14 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setPositiveButtonRadius(int radiusOfButton) {
+        public withAnimation setPositiveButtonRadius(int radiusOfButton) {
             if (radiusOfButton != 0) {
                 binding.positiveButton.setRadius(radiusOfButton * 4);
             }
             return this;
         }
 
-        public withAnim setPositiveButtonBorderColor(int borderColor) {
+        public withAnimation setPositiveButtonBorderColor(int borderColor) {
             if (borderColor != 0) {
                 try {
                     binding.positiveButton.setStrokeColor(ContextCompat.getColor(context, borderColor));
@@ -1878,7 +1878,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setPositiveButtonBorderWidth(int borderWidth) {
+        public withAnimation setPositiveButtonBorderWidth(int borderWidth) {
             if (borderWidth != 0) {
                 binding.positiveButton.setStrokeWidth(borderWidth);
             }
@@ -1886,7 +1886,7 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim setNegativeButtonText(String string, View.OnClickListener listener) {
+        public withAnimation setNegativeButtonText(String string, View.OnClickListener listener) {
             binding.negativeText.setText(string);
             binding.negativeButton.setOnClickListener(v -> {
                 listener.onClick(v);
@@ -1895,7 +1895,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setNegativeButtonTextColor(int textColor) {
+        public withAnimation setNegativeButtonTextColor(int textColor) {
             if (textColor != 0) {
                 try {
                     binding.negativeText.setTextColor(ContextCompat.getColor(context, textColor));
@@ -1906,7 +1906,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setNegativeButtonTextStyle(int textStyle) {
+        public withAnimation setNegativeButtonTextStyle(int textStyle) {
             if (textStyle == 1) {
                 binding.negativeText.setTypeface(binding.negativeText.getTypeface(), Typeface.NORMAL);
             } else if (textStyle == 2) {
@@ -1921,7 +1921,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setNegativeButtonTextSize(int textSizeInSP) {
+        public withAnimation setNegativeButtonTextSize(int textSizeInSP) {
             if (textSizeInSP != 0) {
                 binding.negativeText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeInSP);
             }
@@ -1929,7 +1929,7 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim setNegativeButtonColor(int bgColorOfButton) {
+        public withAnimation setNegativeButtonColor(int bgColorOfButton) {
             if (bgColorOfButton != 0) {
                 try {
                     binding.negativeButton.setCardBackgroundColor(ContextCompat.getColor(context, bgColorOfButton));
@@ -1940,7 +1940,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setNegativeButtonRadius(int radiusOfButton) {
+        public withAnimation setNegativeButtonRadius(int radiusOfButton) {
             if (radiusOfButton != 0) {
                 binding.negativeButton.setRadius(radiusOfButton * 4);
 
@@ -1948,7 +1948,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setNegativeButtonBorderColor(int borderColor) {
+        public withAnimation setNegativeButtonBorderColor(int borderColor) {
             if (borderColor != 0) {
                 try {
                     binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, borderColor));
@@ -1962,7 +1962,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setNegativeButtonBorderWidth(int borderWidth) {
+        public withAnimation setNegativeButtonBorderWidth(int borderWidth) {
             if (borderWidth != 0) {
                 binding.negativeButton.setStrokeWidth(borderWidth);
             }
@@ -1970,7 +1970,7 @@ public class CuteDialog extends Dialog {
         }
 
 
-        public withAnim hideCloseIcon(boolean bool) {
+        public withAnimation hideCloseIcon(boolean bool) {
             if (bool) {
                 binding.closeIcon.setVisibility(View.GONE);
             } else {
@@ -1980,7 +1980,7 @@ public class CuteDialog extends Dialog {
 
         }
 
-        public withAnim hideTitle(boolean bool) {
+        public withAnimation hideTitle(boolean bool) {
             if (bool) {
                 binding.titleText.setVisibility(View.GONE);
             } else {
@@ -1989,7 +1989,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim hideDescription(boolean bool) {
+        public withAnimation hideDescription(boolean bool) {
             if (bool) {
                 binding.descText.setVisibility(View.GONE);
             } else {
@@ -1998,7 +1998,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim hidePositiveButton(boolean bool) {
+        public withAnimation hidePositiveButton(boolean bool) {
             if (bool) {
                 binding.positiveButton.setVisibility(View.GONE);
                 binding.padding4.setVisibility(View.GONE);
@@ -2008,7 +2008,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim hideNegativeButton(boolean bool) {
+        public withAnimation hideNegativeButton(boolean bool) {
 
             if (bool) {
                 binding.negativeButton.setVisibility(View.GONE);
@@ -2022,7 +2022,7 @@ public class CuteDialog extends Dialog {
 
         }
 
-        public withAnim setCloseIconListener(View.OnClickListener listener) {
+        public withAnimation setCloseIconListener(View.OnClickListener listener) {
             binding.closeIcon.setOnClickListener(v -> {
                 listener.onClick(v);
                 dismiss();
@@ -2030,7 +2030,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setCloseIcon(int iconResID) {
+        public withAnimation setCloseIcon(int iconResID) {
             if (iconResID != 0) {
                 try {
                     binding.closeIcon.setImageResource(iconResID);
@@ -2041,7 +2041,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setCloseIconSize(int sizeInDP) {
+        public withAnimation setCloseIconSize(int sizeInDP) {
             if (sizeInDP != 0) {
                 binding.closeIcon.getLayoutParams().height = sizeInDP * 2;
                 binding.closeIcon.getLayoutParams().width = sizeInDP * 2;
@@ -2050,7 +2050,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setCloseIconColor(int colorOfIcon) {
+        public withAnimation setCloseIconColor(int colorOfIcon) {
             if (colorOfIcon != 0) {
                 try {
                     binding.closeIcon.setColorFilter(ContextCompat.getColor(context, colorOfIcon));
@@ -2061,7 +2061,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withAnim setPrimaryColor(int primaryColor) {
+        public withAnimation setPrimaryColor(int primaryColor) {
             if (primaryColor != 0) {
 
                 if (!isTitleColorChanged) {

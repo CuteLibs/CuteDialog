@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 local.properties
+/.idea/intellij-javadocs-4.0.1.xml
+/.idea/.name
