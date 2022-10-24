@@ -37,7 +37,7 @@
 
 ### Gradle
 
-#### Old
+##### Old
 If you're using old gradle versions then follow this.
 Add this in your root `build.gradle` :
 
@@ -50,7 +50,7 @@ allprojects {
 }
 ```
 
-#### New
+##### New
 If you're using new gradle versions then follow this.
 Add this in your `settings.gradle` file:
 
@@ -65,7 +65,7 @@ dependencyResolutionManagement {
 }
 ```
 
-### Theme
+#### Theme
 For using <b>CuteDialog</b> in your project, you must use <b>Material Theme</B> in your project. You can use <b>CuteDialog</b> in both <b>Material</b>  <b>Light</b> and <b>Dark</b> theme.
 
 For example:
