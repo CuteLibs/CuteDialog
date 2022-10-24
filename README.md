@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/library_icon.png" height="70" alt="GitHub forks"> <img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/Cute_Dialog.png" height="80" alt="Cute Dialog"> </p>
+<p align="center"><img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/libaray_icon.png" height="70" alt="GitHub forks"> <img src="https://github.com/CuteLibs/CuteDialog/raw/master/files/Cute_Dialog.png" height="80" alt="Cute Dialog"> </p>
 
 <p align="center"> <a href="https://www.android.com"><img src="https://img.shields.io/badge/platform-Android-yellow.svg" alt="platform"></a>
  <a href="https://android-arsenal.com/api?level=21"><img src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat" alt="API"></a> <a href="https://jitpack.io/#CuteLibs/CuteDialog/"><img src="https://jitpack.io/v/CuteLibs/CuteDialog.svg" alt="JitPack"></a> <a href="https://github.com/CuteLibs/CuteDialog/blob/master/LICENSE"><img src="https://img.shields.io/github/license/CuteLibs/CuteDialog" alt="GitHub license"></a> </p>
@@ -10,7 +10,7 @@
 
  <p align="center"> <a href="https://github.com/CuteLibs/CuteDialog/issues"><img src="https://img.shields.io/github/issues/CuteLibs/CuteDialog" alt="GitHub issues"></a> <a href="https://github.com/CuteLibs/CuteDialog/network"><img src="https://img.shields.io/github/forks/CuteLibs/CuteDialog" alt="GitHub forks"></a> <a href="https://github.com/CuteLibs/CuteDialog/stargazers"><img src="https://img.shields.io/github/stars/CuteLibs/CuteDialog" alt="GitHub stars"></a> <a href="https://github.com/CuteLibs/CuteDialog/graphs/contributors"> <img src="https://img.shields.io/github/contributors/CuteLibs/CuteDialog" alt="GitHub contributors"></a> <img src="https://img.shields.io/github/languages/code-size/CuteLibs/CuteDialog" alt="Code Size">  </p>
   
- <p align="center"> <img src="https://github.com/CuteLibs/CuteDialog/actions/workflows/android.yml/badge.svg" alt="Build"/> <a href="https://www.codacy.com/gh/CuteLibs/CuteDialog/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CuteLibs/CuteDialog&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/b46743b23bf041819fb5232ba87fb17e" alt="Code Quality"></a> <a href="https://www.codefactor.io/repository/github/cutelibs/cutedialog"><img src="https://www.codefactor.io/repository/github/cutelibs/cutedialog/badge" alt="CodeFactor" /></a> <a href="https://sonarcloud.io/summary/new_code?id=CuteLibs_CuteDialog"><img src="https://sonarcloud.io/api/project_badges/measure?project=CuteLibs_CuteDialog&amp;metric=alert_status" alt="Quality Gate Status"></a> </p>
+ <p align="center"> <img src="https://github.com/CuteLibs/CuteDialog/actions/workflows/android.yml/badge.svg" alt="Build"/> <a href="https://www.codacy.com/gh/CuteLibs/CuteDialog/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CuteLibs/CuteDialog&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/b46743b23bf041819fb5232ba87fb17e" alt="Code Quality"></a> <a href="https://www.codefactor.io/repository/github/cutelibs/cutedialog"><img src="https://www.codefactor.io/repository/github/cutelibs/cutedialog/badge" alt="CodeFactor" /></a></p>
 
 <br/>
 
@@ -34,6 +34,8 @@
 
 
 ## Prerequisites
+
+### Gradle
 
 #### Old
 If you're using old gradle versions then follow this.
@@ -63,7 +65,7 @@ dependencyResolutionManagement {
 }
 ```
 
-## Theme
+### Theme
 For using <b>CuteDialog</b> in your project, you must use <b>Material Theme</B> in your project. You can use <b>CuteDialog</b> in both <b>Material</b>  <b>Light</b> and <b>Dark</b> theme.
 
 For example:
@@ -97,110 +99,139 @@ Add this to your app level `build.gradle`:
 ```gradle
 dependencies {
 	...
-	       implementation 'com.github.CuteLibs:CuteDialog:v-1.1'
+	        implementation 'com.github.CuteLibs:CuteDialog:v-2.0'
 
 
 }
 ```
-## Usage
+## Usage ( [Wiki](https://github.com/CuteLibs/CuteDialog/wiki) )  ( [Old Usage](files/README_V1.md) )
 
 ### Basic
 
 ``` java
-            new CuteDialog(this)
-                    .setHeader(CuteDialog.HEADER_ICON)
-                    .setHeaderIcon(R.drawable.icon_1)
-                    .setTitle("Wrong Time", 0, 0, 0)
-                    .setDesc("You can't do this right now.\nTry Later", 0, 0, 0)
-		    .setPositiveButtonListener(v1 -> {
-                        Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
-                    }) 
-                    .setNegativeButtonListener(v12 -> {
-                        Toast.makeText(this, "Negative Button Clicked", Toast.LENGTH_SHORT).show();
-                    }) 
-                    .show();
+       new CuteDialog.withIcon(this)
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("Simple Dialog")
+                        .setDescription("This is a simple Dialog")
+                        .setPositiveButtonText("Okay", v2 -> {
+                        })
+                        .setNegativeButtonText("Cancel", v2 -> {
+                        })
+                        .show();     	
 
 ```
 
 ### Advanced
 
 ``` java
-            new CuteDialog(this)
-                    .setDialogStyle(Color.WHITE,10,CuteDialog.POSITION_CENTER,10) // Whole Dialog Style
-                    .isCancelable(true) // Dialog Cancelable when clicked outside
-                    .setCloseIconStyle(0,30,Color.DKGRAY) // Close Icon Style
-                    .setHeader(CuteDialog.HEADER_IMAGE) // Header Type
-                    .setHeaderImage(R.drawable.image_4) // Image Header 
-                    .setTitle("Something is Wrong", 0, Color.parseColor("#673AB7"), 0) // Title with Design
-                    .setDesc("I don't know what went wrong, but there is a problem.", 0, 0, 0) // Description with Design
-                    .setPositiveButtonText("Try Again",  Color.parseColor("#673AB7"), 0) // Positive Button Text with Design
-                    .setNegativeButtonText("Cancel",  Color.parseColor("#673AB7"), 0) // Negative Button Text with Design
-                    .setPositiveButtonStyle(0, Color.parseColor("#673AB7"), 0, 0, 0) // Positive Button Style
-                    .setNegativeButtonStyle(0, 0, Color.parseColor("#673AB7"), 0, 0) // Negative Button Style 
-                    .setPositiveButtonListener(v1 -> {
-                        Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
-                    }) // Positive Button Click Listener
-                    .setNegativeButtonListener(v12 -> {
-                        Toast.makeText(this, "Negative Button Clicked", Toast.LENGTH_SHORT).show();
-                    }) // Negative Button click Listener
-                    .setCloseListener(v13 -> {
-                        Toast.makeText(this, "Close Icon Clicked", Toast.LENGTH_SHORT).show();
-                    }) // Close Icon click Listener
-                    .show();  // calls to show the dialog
+                new CuteDialog.withIcon(this)
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("Simple Dialog")
+                        .setTitleTextSize(20)
+                        .setTitleTextColor(Color.parseColor("#FF4081"))
+                        .setTitleTextStyle(CuteDialog.STYLE_BOLD)
+                        .setDescription("This is a simple Dialog")
+                        .setDescriptionTextColor(Color.parseColor("#FF4081"))
+                        .setDescriptionTextSize(16)
+                        .setDescriptionTextStyle(CuteDialog.STYLE_NORMAL)
+                        .setPositiveButtonText("Okay", v2 -> {
+                        })
+                        .setNegativeButtonText("Cancel", v2 -> {
+                        })
+                        .setCloseIconListener(v2 -> {
+                        })
+                        .setCloseIcon(R.drawable.icon_1)
+                        .setCloseIconColor(Color.parseColor("#FF4081"))
+                        .setCloseIconSize(20)
+                        .setPositiveButtonColor(Color.parseColor("#FF4081"))
+                        .setPositiveButtonRadius(10)
+                        .setPositiveButtonBorderColor(Color.parseColor("#FF4081"))
+                        .setPositiveButtonBorderWidth(2)
+                        .setPositiveButtonTextColor(Color.parseColor("#FFFFFF"))
+                        .setPositiveButtonTextSize(16)
+                        .setPositiveButtonTextStyle(CuteDialog.STYLE_NORMAL)
+                        .setNegativeButtonColor(Color.parseColor("#FFFFFF"))
+                        .setNegativeButtonRadius(10)
+                        .setNegativeButtonBorderColor(Color.parseColor("#FF4081"))
+                        .setNegativeButtonBorderWidth(2)
+                        .setNegativeButtonTextColor(Color.parseColor("#FF4081"))
+                        .setNegativeButtonTextSize(16)
+                        .setNegativeButtonTextStyle(CuteDialog.STYLE_NORMAL)
+                        .setDialogBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setDialogRadius(10)
+                        .setDialogPosition(CuteDialog.POSITION_CENTER)
+                        .setPadding(20)
+                        .setPrimaryColor(Color.parseColor("#FF4081"))
+                        .isCancelable(true)
+                        .hideNegativeButton(false)
+                        .hidePositiveButton(false)
+                        .hideDescription(false)
+                        .hideTitle(false)
+                        .hideCloseIcon(false)
+                        .show();		
+
+```
+
+## Theme ( [Wiki](https://github.com/CuteLibs/CuteDialog/wiki) ) 
+
+### with Icon
+
+Call `new CuteDialog.withIcon(this)` for using a **Icon** as header and use `.setIcon` to set the resource.
+
+**Example:**
+
+``` java
+      new CuteDialog.withIcon(this)
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("Simple Dialog")
+                        .setDescription("This is a simple Dialog")
+                        .show();    
+			
+```
+
+### with Image
+
+Call `new CuteDialog.withImage(this)` for using a **Image** as header and use `.setImage` to set the resource.
+
+
+**Example:**
+
+``` java
+	 new CuteDialog.withImage(this)
+                        .setImage(R.drawable.image_1)
+                        .setTitle("Take a break")
+                        .setDescription("Isn't it a great time to go for a walk?")
+                        .show();
+
+```
+
+### with Animation
+
+Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.setAnimation` to set the resource. Put the Animation in `res/raw` folder
+
+**Example:**
+
+``` java
+	   new CuteDialog.withAnimation(this)
+                        .setAnimation(R.raw.anim1)
+                        .setTitle("Set Reminder")
+                        .setDescription("Do you want me to remind you? ")
+                        .show(); 
+
 
 ```
 
 
-## Customizations
+
+## Customizations ( [Wiki](https://github.com/CuteLibs/CuteDialog/wiki) ) 
 
 #### Notes
 
-* `setHeader` - it's a custom field to choose which type of header you want to use. Details at [Attributes/Enums](#enums)
-* `setHeaderIcon` -  used to choose a icon, basically drawable/mipmap. Example, `R.drawable.icon` / `R.mipmap.ic_launcher`
-* `setHeaderImage` -  used to choose a image, basically drawable. Example, `R.drawable.image`
-* `setHeaderAnimation` - used to choose a animation from 'res/raw' folder. Example, `R.raw.anim`. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
+* `new CuteDialog.withIcon(this)` - use an icon as header, basically drawable/mipmap. Example, `R.drawable.icon` / `R.mipmap.ic_launcher`
+* `new CuteDialog.withImage(this)` -  use an image as header, basically drawable. Example, `R.drawable.image`
+* `new CuteDialog.withAnimation(this)` -  use an animation as header, from 'res/raw' folder. Example, `R.raw.anim`. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
 
 ![customizations](https://github.com/CuteLibs/CuteDialog/blob/master/files/details.jpg)
-
-## Attributes 
-
-#### Attributes
-
-| Keyword | Values | 
-|---------|--------|
-| `setDialogStyle` | int `bgColor`, int `cornerRadius`, int `dialogPosition`, int `padding` |
-| `isCancelable` | boolean `cancelable` | 
-| `setCloseIconStyle` | int `iconResID`, int `sizeInDP`, int `colorOfIcon` | 
-| `setHeader` | int `chooser` |  
-| `setHeaderIcon` | int `icon` |  
-| `setHeaderImage` | int `image` |  
-| `setHeaderAnimation` | int `animation` |  
-| `setTitle` | String titleText, int `textSizeInSP`, int `textColor`, int `textStyle` |  
-| `setDesc` | String descText, int `textSizeInSP`, int `textColor`, int `textStyle` |  
-| `setPositiveButtonStyle` | int `radiusOfButton`, int `bgColorOfButton`, int `borderColor`, int `borderWidth`, int `textSizeInSP` |  
-| `setNegativeButtonStyle` | int `radiusOfButton`, int `bgColorOfButton`, int `borderColor`, int `borderWidth`, int `textSizeInSP` |  
-| `setPositiveButtonText` | String `positiveText`, int `textColor`, int `textStyle` |  
-| `setNegativeButtonText` | String `negativeText`, int `textColor`, int `textStyle` |  
-| `setVisibilityOptions` | boolean `hideCloseIcon`, boolean `hideTitle`, boolean `hideDesc`, boolean `hidePositiveButton`, boolean `hideNegativeButton` |  
-| `setPositiveButtonListener` | View.OnClickListener `listener` |  
-| `setNegativeButtonListener` | View.OnClickListener `listener` |  
-| `setCloseListener` | View.OnClickListener `listener` |  
-| `show()`   |  
-
-#### Enums
-
-| Usage           | Keyword           | Value | 
-|-----------------|-------------------|-------|
-| Dialog Position | POSITION_CENTER   | 1     |
-| Dialog Position | POSITION_TOP      | 2     |
-| Dialog Position | POSITION_BOTTOM   | 3     |
-| Text Style      | STYLE_NORMAL      | 1     |
-| Text Style      | STYLE_BOLD        | 2     |
-| Text Style      | STYLE_ITALIC      | 3     |
-| Text Style      | STYLE_BOLD_ITALIC | 4     |
-| Header Styler   | HEADER_ICON       | 1     |
-| Header Styler   | HEADER_IMAGE      | 2     |
-| Header Styler   | HEADER_ANIMATION  | 3     |
 
 ## More Demo
 
