@@ -637,6 +637,7 @@ public class CuteDialog extends Dialog {
 
         }
 
+
         public withIcon setDialogBackgroundColor(int bgColor) {
             if (bgColor != 0) {
                 try {
@@ -648,12 +649,14 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
+
         public withIcon setDialogRadius(int cornerRadius) {
             if (cornerRadius != 0) {
                 binding.wholeCard.setRadius(cornerRadius * 4);
             }
             return this;
         }
+
 
         public withIcon setDialogPosition(int dialogPosition) {
             if (dialogPosition == 1) {
@@ -1229,7 +1232,6 @@ public class CuteDialog extends Dialog {
         }
 
         public withImage setDescriptionTextStyle(int textStyle) {
-            // desc text style
             if (textStyle == 1) {
                 binding.descText.setTypeface(binding.descText.getTypeface(), Typeface.NORMAL);
             } else if (textStyle == 2) {
@@ -1992,7 +1994,6 @@ public class CuteDialog extends Dialog {
             }
             return this;
         }
-
 
     }
 
