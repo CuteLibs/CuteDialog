@@ -2,7 +2,6 @@ package io.github.cutelibs.cutedialogdemo;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,27 +20,67 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.design1.setOnClickListener(v ->
+
                 new CuteDialog.withIcon(this)
-                        .setIcon(R.drawable.icon_1)
-                        .setTitle("Wrong Time")
-                        .setDescription("You can't do this at this time")
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("Simple Dialog")
+                        .setTitleTextSize(20)
+                        .setTitleTextColor(Color.parseColor("#FF4081"))
+                        .setTitleTextStyle(CuteDialog.STYLE_BOLD)
+                        .setDescription("This is a simple Dialog")
+                        .setDescriptionTextColor(Color.parseColor("#FF4081"))
+                        .setDescriptionTextSize(16)
+                        .setDescriptionTextStyle(CuteDialog.STYLE_NORMAL)
                         .setPositiveButtonText("Okay", v2 -> {
-                            Toast.makeText(this, "Test", Toast.LENGTH_SHORT).show();
                         })
+                        .setNegativeButtonText("Cancel", v2 -> {
+                        })
+                        .setCloseIconListener(v2 -> {
+                        })
+                        .setCloseIcon(R.drawable.icon_1)
+                        .setCloseIconColor(Color.parseColor("#FF4081"))
+                        .setCloseIconSize(20)
+                        .setPositiveButtonColor(Color.parseColor("#FF4081"))
+                        .setPositiveButtonRadius(10)
+                        .setPositiveButtonBorderColor(Color.parseColor("#FF4081"))
+                        .setPositiveButtonBorderWidth(2)
+                        .setPositiveButtonTextColor(Color.parseColor("#FFFFFF"))
+                        .setPositiveButtonTextSize(16)
+                        .setPositiveButtonTextStyle(CuteDialog.STYLE_NORMAL)
+                        .setNegativeButtonColor(Color.parseColor("#FFFFFF"))
+                        .setNegativeButtonRadius(10)
+                        .setNegativeButtonBorderColor(Color.parseColor("#FF4081"))
+                        .setNegativeButtonBorderWidth(2)
+                        .setNegativeButtonTextColor(Color.parseColor("#FF4081"))
+                        .setNegativeButtonTextSize(16)
+                        .setNegativeButtonTextStyle(CuteDialog.STYLE_NORMAL)
+                        .setDialogBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setDialogRadius(10)
+                        .setDialogPosition(CuteDialog.POSITION_CENTER)
+                        .setPadding(20)
+                        .setPrimaryColor(Color.parseColor("#FF4081"))
+                        .isCancelable(true)
+                        .hideNegativeButton(false)
+                        .hidePositiveButton(false)
+                        .hideDescription(false)
+                        .hideTitle(false)
+                        .hideCloseIcon(false)
                         .show()
         );
 
-        binding.design2.setOnClickListener(v -> new CuteDialog.withImage(this)
-                .setHeaderImage(R.drawable.image_1)
-                .setTitle("Take a break")
-                .setDescription("Isn't it a great time to go for a walk?")
-                .show());
+        binding.design2.setOnClickListener(v ->
+                new CuteDialog.withImage(this)
+                        .setImage(R.drawable.image_1)
+                        .setTitle("Take a break")
+                        .setDescription("Isn't it a great time to go for a walk?")
+                        .show());
 
-        binding.design3.setOnClickListener(v -> new CuteDialog.withAnim(this)
-                .setAnimation(R.raw.anim1)
-                .setTitle("Set Reminder")
-                .setDescription("Do you want me to remind you? ")
-                .show());
+        binding.design3.setOnClickListener(v ->
+                new CuteDialog.withAnim(this)
+                        .setAnimation(R.raw.anim1)
+                        .setTitle("Set Reminder")
+                        .setDescription("Do you want me to remind you? ")
+                        .show());
 
         binding.design4.setOnClickListener(v -> new CuteDialog(this)
                 .setHeader(CuteDialog.HEADER_IMAGE)
