@@ -35,6 +35,8 @@
 
 ## Prerequisites
 
+### Gradle
+
 #### Old
 If you're using old gradle versions then follow this.
 Add this in your root `build.gradle` :
@@ -63,7 +65,7 @@ dependencyResolutionManagement {
 }
 ```
 
-## Theme
+### Theme
 For using <b>CuteDialog</b> in your project, you must use <b>Material Theme</B> in your project. You can use <b>CuteDialog</b> in both <b>Material</b>  <b>Light</b> and <b>Dark</b> theme.
 
 For example:
@@ -102,12 +104,11 @@ dependencies {
 
 }
 ```
-## Usage ( Old Usage )
+## Usage ( [Old Usage](files/README_V1.md) )
 
 ### Basic
 
 ``` java
-
        new CuteDialog.withIcon(this)
                         .setIcon(R.mipmap.ic_launcher)
                         .setTitle("Simple Dialog")
@@ -116,16 +117,13 @@ dependencies {
                         })
                         .setNegativeButtonText("Cancel", v2 -> {
                         })
-                        .show();     
-			
+                        .show();     	
 
 ```
 
 ### Advanced
 
 ``` java
-         
-	 
                 new CuteDialog.withIcon(this)
                         .setIcon(R.mipmap.ic_launcher)
                         .setTitle("Simple Dialog")
@@ -170,8 +168,7 @@ dependencies {
                         .hideDescription(false)
                         .hideTitle(false)
                         .hideCloseIcon(false)
-                        .show();
-			
+                        .show();		
 
 ```
 
@@ -190,7 +187,6 @@ Call `new CuteDialog.withIcon(this)` for using a **Icon** as header and use `.se
                         .setDescription("This is a simple Dialog")
                         .show();    
 			
-
 ```
 
 ### with Image
@@ -206,7 +202,6 @@ Call `new CuteDialog.withImage(this)` for using a **Image** as header and use `.
                         .setTitle("Take a break")
                         .setDescription("Isn't it a great time to go for a walk?")
                         .show();
-
 
 ```
 
@@ -232,9 +227,9 @@ Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.s
 
 #### Notes
 
-* `setHeaderIcon` -  used to choose a icon, basically drawable/mipmap. Example, `R.drawable.icon` / `R.mipmap.ic_launcher`
-* `setHeaderImage` -  used to choose a image, basically drawable. Example, `R.drawable.image`
-* `setHeaderAnimation` - used to choose a animation from 'res/raw' folder. Example, `R.raw.anim`. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
+* `new CuteDialog.withIcon(this)` - use an icon as header, basically drawable/mipmap. Example, `R.drawable.icon` / `R.mipmap.ic_launcher`
+* `new CuteDialog.withImage(this)` -  use an image as header, basically drawable. Example, `R.drawable.image`
+* `new CuteDialog.withAnim(this)` -  use an animation as header, from 'res/raw' folder. Example, `R.raw.anim`. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
 
 ![customizations](https://github.com/CuteLibs/CuteDialog/blob/master/files/details.jpg)
 
@@ -274,9 +269,7 @@ Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.s
 | Text Style      | STYLE_BOLD        | 2     |
 | Text Style      | STYLE_ITALIC      | 3     |
 | Text Style      | STYLE_BOLD_ITALIC | 4     |
-| Header Styler   | HEADER_ICON       | 1     |
-| Header Styler   | HEADER_IMAGE      | 2     |
-| Header Styler   | HEADER_ANIMATION  | 3     |
+
 
 ## More Demo
 
