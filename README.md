@@ -212,7 +212,7 @@ Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.s
 **Example:**
 
 ``` java
-	   new CuteDialog.withAnim(this)
+	   new CuteDialog.withAnimation(this)
                         .setAnimation(R.raw.anim1)
                         .setTitle("Set Reminder")
                         .setDescription("Do you want me to remind you? ")
@@ -229,7 +229,7 @@ Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.s
 
 * `new CuteDialog.withIcon(this)` - use an icon as header, basically drawable/mipmap. Example, `R.drawable.icon` / `R.mipmap.ic_launcher`
 * `new CuteDialog.withImage(this)` -  use an image as header, basically drawable. Example, `R.drawable.image`
-* `new CuteDialog.withAnim(this)` -  use an animation as header, from 'res/raw' folder. Example, `R.raw.anim`. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
+* `new CuteDialog.withAnimation(this)` -  use an animation as header, from 'res/raw' folder. Example, `R.raw.anim`. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
 
 ![customizations](https://github.com/CuteLibs/CuteDialog/blob/master/files/details.jpg)
 
