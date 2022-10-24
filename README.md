@@ -233,44 +233,6 @@ Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.s
 
 ![customizations](https://github.com/CuteLibs/CuteDialog/blob/master/files/details.jpg)
 
-## Attributes ( [Wiki](https://github.com/CuteLibs/CuteDialog/wiki) ) 
-
-#### Attributes
-
-| Keyword | Values | 
-|---------|--------|
-| `setDialogStyle` | int `bgColor`, int `cornerRadius`, int `dialogPosition`, int `padding` |
-| `isCancelable` | boolean `cancelable` | 
-| `setCloseIconStyle` | int `iconResID`, int `sizeInDP`, int `colorOfIcon` | 
-| `setHeader` | int `chooser` |  
-| `setHeaderIcon` | int `icon` |  
-| `setHeaderImage` | int `image` |  
-| `setHeaderAnimation` | int `animation` |  
-| `setTitle` | String titleText, int `textSizeInSP`, int `textColor`, int `textStyle` |  
-| `setDesc` | String descText, int `textSizeInSP`, int `textColor`, int `textStyle` |  
-| `setPositiveButtonStyle` | int `radiusOfButton`, int `bgColorOfButton`, int `borderColor`, int `borderWidth`, int `textSizeInSP` |  
-| `setNegativeButtonStyle` | int `radiusOfButton`, int `bgColorOfButton`, int `borderColor`, int `borderWidth`, int `textSizeInSP` |  
-| `setPositiveButtonText` | String `positiveText`, int `textColor`, int `textStyle` |  
-| `setNegativeButtonText` | String `negativeText`, int `textColor`, int `textStyle` |  
-| `setVisibilityOptions` | boolean `hideCloseIcon`, boolean `hideTitle`, boolean `hideDesc`, boolean `hidePositiveButton`, boolean `hideNegativeButton` |  
-| `setPositiveButtonListener` | View.OnClickListener `listener` |  
-| `setNegativeButtonListener` | View.OnClickListener `listener` |  
-| `setCloseListener` | View.OnClickListener `listener` |  
-| `show()`   |  
-
-#### Enums
-
-| Usage           | Keyword           | Value | 
-|-----------------|-------------------|-------|
-| Dialog Position | POSITION_CENTER   | 1     |
-| Dialog Position | POSITION_TOP      | 2     |
-| Dialog Position | POSITION_BOTTOM   | 3     |
-| Text Style      | STYLE_NORMAL      | 1     |
-| Text Style      | STYLE_BOLD        | 2     |
-| Text Style      | STYLE_ITALIC      | 3     |
-| Text Style      | STYLE_BOLD_ITALIC | 4     |
-
-
 ## More Demo
 
 ![collage](https://github.com/CuteLibs/CuteDialog/raw/master/files/collage.jpg)
