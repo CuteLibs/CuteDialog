@@ -54,6 +54,7 @@ public class CuteDialog extends Dialog {
     CuteDialogMainLayoutBinding binding;
     private int HEADER_CHOOSER = 1;
 
+
     @Deprecated
     public CuteDialog(Context context) {
         super(context);
@@ -559,6 +560,10 @@ public class CuteDialog extends Dialog {
         Context context;
         CuteDialogMainLayoutBinding binding;
 
+        boolean isTitleColorChanged = false;
+        boolean isPositiveColorChanged = false;
+        boolean isNegativeColorChanged = false;
+
         public withIcon(Context context) {
             super(context);
             this.context = context;
@@ -716,6 +721,8 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.titleText.setTextColor(textColor);
                 }
+
+                isTitleColorChanged = true;
             }
             return this;
         }
@@ -759,7 +766,6 @@ public class CuteDialog extends Dialog {
         }
 
         public withIcon setDescriptionTextStyle(int textStyle) {
-            // desc text style
             if (textStyle == 1) {
                 binding.descText.setTypeface(binding.descText.getTypeface(), Typeface.NORMAL);
             } else if (textStyle == 2) {
@@ -824,6 +830,7 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.positiveButton.setCardBackgroundColor(bgColorOfButton);
                 }
+                isPositiveColorChanged = true;
             }
             return this;
         }
@@ -923,6 +930,7 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.negativeButton.setStrokeColor(borderColor);
                 }
+                isNegativeColorChanged = true;
             } else {
                 binding.negativeButton.setStrokeColor(Color.TRANSPARENT);
             }
@@ -983,9 +991,7 @@ public class CuteDialog extends Dialog {
                 binding.negativeButton.setVisibility(View.VISIBLE);
             }
 
-
             return this;
-
         }
 
         public withIcon setCloseIconListener(View.OnClickListener listener) {
@@ -1027,6 +1033,38 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
+        public withIcon setPrimaryColor(int primaryColor) {
+            if (primaryColor != 0) {
+
+                if (!isTitleColorChanged) {
+                    try {
+                        binding.titleText.setTextColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.titleText.setTextColor(primaryColor);
+                    }
+                }
+
+                if (!isPositiveColorChanged) {
+                    try {
+                        binding.positiveButton.setCardBackgroundColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.positiveButton.setCardBackgroundColor(primaryColor);
+                    }
+                }
+
+                if (!isNegativeColorChanged) {
+                    try {
+                        binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.negativeButton.setStrokeColor(primaryColor);
+                    }
+                }
+
+            }
+            return this;
+        }
+
+
     }
 
     public static class withImage extends Dialog {
@@ -1034,6 +1072,9 @@ public class CuteDialog extends Dialog {
         Context context;
 
         CuteDialogMainLayoutBinding binding;
+        boolean isTitleColorChanged = false;
+        boolean isPositiveColorChanged = false;
+        boolean isNegativeColorChanged = false;
 
         public withImage(Context context) {
             super(context);
@@ -1189,6 +1230,7 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.titleText.setTextColor(textColor);
                 }
+                isTitleColorChanged = true;
             }
             return this;
         }
@@ -1296,6 +1338,7 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.positiveButton.setCardBackgroundColor(bgColorOfButton);
                 }
+                isPositiveColorChanged = true;
             }
             return this;
         }
@@ -1395,6 +1438,8 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.negativeButton.setStrokeColor(borderColor);
                 }
+                isNegativeColorChanged = true;
+
             } else {
                 binding.negativeButton.setStrokeColor(Color.TRANSPARENT);
             }
@@ -1499,6 +1544,37 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
+        public withImage setPrimaryColor(int primaryColor) {
+            if (primaryColor != 0) {
+
+                if (!isTitleColorChanged) {
+                    try {
+                        binding.titleText.setTextColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.titleText.setTextColor(primaryColor);
+                    }
+                }
+
+                if (!isPositiveColorChanged) {
+                    try {
+                        binding.positiveButton.setCardBackgroundColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.positiveButton.setCardBackgroundColor(primaryColor);
+                    }
+                }
+
+                if (!isNegativeColorChanged) {
+                    try {
+                        binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.negativeButton.setStrokeColor(primaryColor);
+                    }
+                }
+
+            }
+            return this;
+        }
+
 
     }
 
@@ -1507,6 +1583,10 @@ public class CuteDialog extends Dialog {
         Context context;
 
         CuteDialogMainLayoutBinding binding;
+
+        boolean isTitleColorChanged = false;
+        boolean isPositiveColorChanged = false;
+        boolean isNegativeColorChanged = false;
 
         public withAnim(Context context) {
             super(context);
@@ -1670,6 +1750,7 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.titleText.setTextColor(textColor);
                 }
+                isTitleColorChanged = true;
             }
             return this;
         }
@@ -1784,6 +1865,7 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.positiveButton.setCardBackgroundColor(bgColorOfButton);
                 }
+                isPositiveColorChanged = true;
             }
             return this;
         }
@@ -1887,6 +1969,7 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.negativeButton.setStrokeColor(borderColor);
                 }
+                isNegativeColorChanged = true;
             } else {
                 binding.negativeButton.setStrokeColor(Color.TRANSPARENT);
             }
@@ -1991,6 +2074,37 @@ public class CuteDialog extends Dialog {
                 } catch (Resources.NotFoundException e) {
                     binding.closeIcon.setColorFilter(colorOfIcon);
                 }
+            }
+            return this;
+        }
+
+        public withAnim setPrimaryColor(int primaryColor) {
+            if (primaryColor != 0) {
+
+                if (!isTitleColorChanged) {
+                    try {
+                        binding.titleText.setTextColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.titleText.setTextColor(primaryColor);
+                    }
+                }
+
+                if (!isPositiveColorChanged) {
+                    try {
+                        binding.positiveButton.setCardBackgroundColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.positiveButton.setCardBackgroundColor(primaryColor);
+                    }
+                }
+
+                if (!isNegativeColorChanged) {
+                    try {
+                        binding.negativeButton.setStrokeColor(ContextCompat.getColor(context, primaryColor));
+                    } catch (Resources.NotFoundException e) {
+                        binding.negativeButton.setStrokeColor(primaryColor);
+                    }
+                }
+
             }
             return this;
         }
