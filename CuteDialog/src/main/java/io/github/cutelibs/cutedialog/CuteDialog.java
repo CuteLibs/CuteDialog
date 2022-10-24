@@ -1191,7 +1191,7 @@ public class CuteDialog extends Dialog {
             return this;
         }
 
-        public withImage setHeaderImage(int image) {
+        public withImage setImage(int image) {
             try {
                 binding.mainImage.setImageResource(image);
             } catch (Resources.NotFoundException e) {
