@@ -97,65 +97,141 @@ Add this to your app level `build.gradle`:
 ```gradle
 dependencies {
 	...
-	       implementation 'com.github.CuteLibs:CuteDialog:v-1.1'
+	        implementation 'com.github.CuteLibs:CuteDialog:v-2.0'
 
 
 }
 ```
-## Usage
+## Usage ( Old Usage )
 
 ### Basic
 
 ``` java
-            new CuteDialog(this)
-                    .setHeader(CuteDialog.HEADER_ICON)
-                    .setHeaderIcon(R.drawable.icon_1)
-                    .setTitle("Wrong Time", 0, 0, 0)
-                    .setDesc("You can't do this right now.\nTry Later", 0, 0, 0)
-		    .setPositiveButtonListener(v1 -> {
-                        Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
-                    }) 
-                    .setNegativeButtonListener(v12 -> {
-                        Toast.makeText(this, "Negative Button Clicked", Toast.LENGTH_SHORT).show();
-                    }) 
-                    .show();
+
+       new CuteDialog.withIcon(this)
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("Simple Dialog")
+                        .setDescription("This is a simple Dialog")
+                        .setPositiveButtonText("Okay", v2 -> {
+                        })
+                        .setNegativeButtonText("Cancel", v2 -> {
+                        })
+                        .show();     
+			
 
 ```
 
 ### Advanced
 
 ``` java
-            new CuteDialog(this)
-                    .setDialogStyle(Color.WHITE,10,CuteDialog.POSITION_CENTER,10) // Whole Dialog Style
-                    .isCancelable(true) // Dialog Cancelable when clicked outside
-                    .setCloseIconStyle(0,30,Color.DKGRAY) // Close Icon Style
-                    .setHeader(CuteDialog.HEADER_IMAGE) // Header Type
-                    .setHeaderImage(R.drawable.image_4) // Image Header 
-                    .setTitle("Something is Wrong", 0, Color.parseColor("#673AB7"), 0) // Title with Design
-                    .setDesc("I don't know what went wrong, but there is a problem.", 0, 0, 0) // Description with Design
-                    .setPositiveButtonText("Try Again",  Color.parseColor("#673AB7"), 0) // Positive Button Text with Design
-                    .setNegativeButtonText("Cancel",  Color.parseColor("#673AB7"), 0) // Negative Button Text with Design
-                    .setPositiveButtonStyle(0, Color.parseColor("#673AB7"), 0, 0, 0) // Positive Button Style
-                    .setNegativeButtonStyle(0, 0, Color.parseColor("#673AB7"), 0, 0) // Negative Button Style 
-                    .setPositiveButtonListener(v1 -> {
-                        Toast.makeText(this, "Positive Button Clicked", Toast.LENGTH_SHORT).show();
-                    }) // Positive Button Click Listener
-                    .setNegativeButtonListener(v12 -> {
-                        Toast.makeText(this, "Negative Button Clicked", Toast.LENGTH_SHORT).show();
-                    }) // Negative Button click Listener
-                    .setCloseListener(v13 -> {
-                        Toast.makeText(this, "Close Icon Clicked", Toast.LENGTH_SHORT).show();
-                    }) // Close Icon click Listener
-                    .show();  // calls to show the dialog
+         
+	 
+                new CuteDialog.withIcon(this)
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("Simple Dialog")
+                        .setTitleTextSize(20)
+                        .setTitleTextColor(Color.parseColor("#FF4081"))
+                        .setTitleTextStyle(CuteDialog.STYLE_BOLD)
+                        .setDescription("This is a simple Dialog")
+                        .setDescriptionTextColor(Color.parseColor("#FF4081"))
+                        .setDescriptionTextSize(16)
+                        .setDescriptionTextStyle(CuteDialog.STYLE_NORMAL)
+                        .setPositiveButtonText("Okay", v2 -> {
+                        })
+                        .setNegativeButtonText("Cancel", v2 -> {
+                        })
+                        .setCloseIconListener(v2 -> {
+                        })
+                        .setCloseIcon(R.drawable.icon_1)
+                        .setCloseIconColor(Color.parseColor("#FF4081"))
+                        .setCloseIconSize(20)
+                        .setPositiveButtonColor(Color.parseColor("#FF4081"))
+                        .setPositiveButtonRadius(10)
+                        .setPositiveButtonBorderColor(Color.parseColor("#FF4081"))
+                        .setPositiveButtonBorderWidth(2)
+                        .setPositiveButtonTextColor(Color.parseColor("#FFFFFF"))
+                        .setPositiveButtonTextSize(16)
+                        .setPositiveButtonTextStyle(CuteDialog.STYLE_NORMAL)
+                        .setNegativeButtonColor(Color.parseColor("#FFFFFF"))
+                        .setNegativeButtonRadius(10)
+                        .setNegativeButtonBorderColor(Color.parseColor("#FF4081"))
+                        .setNegativeButtonBorderWidth(2)
+                        .setNegativeButtonTextColor(Color.parseColor("#FF4081"))
+                        .setNegativeButtonTextSize(16)
+                        .setNegativeButtonTextStyle(CuteDialog.STYLE_NORMAL)
+                        .setDialogBackgroundColor(Color.parseColor("#FFFFFF"))
+                        .setDialogRadius(10)
+                        .setDialogPosition(CuteDialog.POSITION_CENTER)
+                        .setPadding(20)
+                        .setPrimaryColor(Color.parseColor("#FF4081"))
+                        .isCancelable(true)
+                        .hideNegativeButton(false)
+                        .hidePositiveButton(false)
+                        .hideDescription(false)
+                        .hideTitle(false)
+                        .hideCloseIcon(false)
+                        .show();
+			
 
 ```
+
+## Theme
+
+### with Icon
+
+Call `new CuteDialog.withIcon(this)` for using a **Icon** as header and use `.setIcon` to set the resource.
+
+**Example:**
+
+``` java
+      new CuteDialog.withIcon(this)
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("Simple Dialog")
+                        .setDescription("This is a simple Dialog")
+                        .show();    
+			
+
+```
+
+### with Image
+
+Call `new CuteDialog.withImage(this)` for using a **Image** as header and use `.setImage` to set the resource.
+
+
+**Example:**
+
+``` java
+	 new CuteDialog.withImage(this)
+                        .setImage(R.drawable.image_1)
+                        .setTitle("Take a break")
+                        .setDescription("Isn't it a great time to go for a walk?")
+                        .show();
+
+
+```
+
+### with Animation
+
+Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.setAnimation` to set the resource. Put the Animation in `res/raw` folder
+
+**Example:**
+
+``` java
+	   new CuteDialog.withAnim(this)
+                        .setAnimation(R.raw.anim1)
+                        .setTitle("Set Reminder")
+                        .setDescription("Do you want me to remind you? ")
+                        .show(); 
+
+
+```
+
 
 
 ## Customizations
 
 #### Notes
 
-* `setHeader` - it's a custom field to choose which type of header you want to use. Details at [Attributes/Enums](#enums)
 * `setHeaderIcon` -  used to choose a icon, basically drawable/mipmap. Example, `R.drawable.icon` / `R.mipmap.ic_launcher`
 * `setHeaderImage` -  used to choose a image, basically drawable. Example, `R.drawable.image`
 * `setHeaderAnimation` - used to choose a animation from 'res/raw' folder. Example, `R.raw.anim`. Animtaion is shown using [Lottie for Android](https://github.com/airbnb/lottie-android) library.
