@@ -104,7 +104,7 @@ dependencies {
 
 }
 ```
-## Usage ( [Old Usage](files/README_V1.md) )
+## Usage ( [Wiki](https://github.com/CuteLibs/CuteDialog/wiki) )  ( [Old Usage](files/README_V1.md) )
 
 ### Basic
 
@@ -172,7 +172,7 @@ dependencies {
 
 ```
 
-## Theme
+## Theme ( [Wiki](https://github.com/CuteLibs/CuteDialog/wiki) ) 
 
 ### with Icon
 
@@ -223,7 +223,7 @@ Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.s
 
 
 
-## Customizations
+## Customizations ( [Wiki](https://github.com/CuteLibs/CuteDialog/wiki) ) 
 
 #### Notes
 
@@ -233,7 +233,7 @@ Call `new CuteDialog.withAnim(this)` for using a **Image** as header and use `.s
 
 ![customizations](https://github.com/CuteLibs/CuteDialog/blob/master/files/details.jpg)
 
-## Attributes 
+## Attributes ( [Wiki](https://github.com/CuteLibs/CuteDialog/wiki) ) 
 
 #### Attributes
 
