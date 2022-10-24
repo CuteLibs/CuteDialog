@@ -99,7 +99,7 @@ Add this to your app level `build.gradle`:
 ```gradle
 dependencies {
 	...
-	        implementation 'com.github.CuteLibs:CuteDialog:v-2.0'
+	        implementation 'com.github.CuteLibs:CuteDialog:v-2.1'
 
 
 }
