@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat;
 
 import io.github.cutelibs.cutedialog.databinding.CuteDialogMainLayoutBinding;
 
+
 public class CuteDialog extends Dialog {
 
     public static final int POSITION_CENTER = 1;
