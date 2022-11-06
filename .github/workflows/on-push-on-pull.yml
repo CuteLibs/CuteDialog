@@ -10,7 +10,7 @@ on:
 
 
 concurrency:
-  group: ${{ github.ref }}
+  group: "on-push-on-pull"
   cancel-in-progress: true
 
 jobs:
