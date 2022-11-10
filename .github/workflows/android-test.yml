@@ -7,6 +7,7 @@ concurrency:
   group: "android-test"
   cancel-in-progress: true
 
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -32,7 +33,6 @@ jobs:
         with:
           name: lint.html
           path: CuteDialog/build/reports/lint-results-debug.html
-
 
   unit-test:
     needs: [ lint ]
@@ -76,7 +76,6 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-
 
       - name: Run Espresso Test
         uses: reactivecircus/android-emulator-runner@v2
